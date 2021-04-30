@@ -34,6 +34,8 @@ public class AudioHandler : MonoBehaviour
         if (audioPaths == null || audioPaths.Count == 0)
             return;
 
+        StopAudio();
+
         audioPlayerCanvas.SetActive(true);
         audioPlayerCanvas.transform.position = spawnPosition;
 
@@ -50,7 +52,7 @@ public class AudioHandler : MonoBehaviour
         }
 
         currentAudioId = 0;
-        audioPlayer.clip = Resources.Load<AudioClip>(Path.Combine("Audio", audioPaths[0].path));
+        audioPlayer.clip = Resources.Load<AudioClip>(Path.Combine("FileMultimediali","Audio", audioPaths[0].path));
         audioTitle.text = audioPaths[0].path;
 
     }
@@ -95,7 +97,7 @@ public class AudioHandler : MonoBehaviour
         StopAudio();
 
         currentAudioId = ((currentAudioId + 1) % (audioPaths.Count));
-        audioPlayer.clip = Resources.Load<AudioClip>(Path.Combine("Audio", audioPaths[currentAudioId].path));
+        audioPlayer.clip = Resources.Load<AudioClip>(Path.Combine("FileMultimediali","Audio", audioPaths[currentAudioId].path));
         audioTitle.text = audioPaths[currentAudioId].path;
     }
 
@@ -108,7 +110,7 @@ public class AudioHandler : MonoBehaviour
             currentAudioId = audioPaths.Count - 1;
 
 
-        audioPlayer.clip = Resources.Load<AudioClip>(Path.Combine("Audio", audioPaths[currentAudioId].path));
+        audioPlayer.clip = Resources.Load<AudioClip>(Path.Combine("FileMultimediali","Audio", audioPaths[currentAudioId].path));
         audioTitle.text = audioPaths[currentAudioId].path;
     }
 

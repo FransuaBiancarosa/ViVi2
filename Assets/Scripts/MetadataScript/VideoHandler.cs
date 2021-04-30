@@ -34,6 +34,8 @@ public class VideoHandler : MonoBehaviour
         if (videoPaths == null || videoPaths.Count==0)
             return;
 
+        StopVideo();
+
         videoPlayerCanvas.SetActive(true);
         videoPlayerCanvas.transform.position = spawnPosition;
 
@@ -50,7 +52,7 @@ public class VideoHandler : MonoBehaviour
         }
 
         currentVideoId = 0;
-        videoPlayer.clip = Resources.Load<VideoClip>(Path.Combine("Video", videoPaths[0].path));
+        videoPlayer.clip = Resources.Load<VideoClip>(Path.Combine("FileMultimediali","Video", videoPaths[0].path));
         videoTitle.text = videoPaths[0].path;
 
     }
@@ -97,7 +99,7 @@ public class VideoHandler : MonoBehaviour
         StopVideo();
 
         currentVideoId = ((currentVideoId + 1) % (videoPaths.Count));
-        videoPlayer.clip = Resources.Load<VideoClip>(Path.Combine("Video", videoPaths[currentVideoId].path));
+        videoPlayer.clip = Resources.Load<VideoClip>(Path.Combine("FileMultimediali","Video", videoPaths[currentVideoId].path));
         videoTitle.text = videoPaths[currentVideoId].path;
     }
 
@@ -110,7 +112,7 @@ public class VideoHandler : MonoBehaviour
             currentVideoId = videoPaths.Count - 1;
 
      
-        videoPlayer.clip = Resources.Load<VideoClip>(Path.Combine("Video", videoPaths[currentVideoId].path));
+        videoPlayer.clip = Resources.Load<VideoClip>(Path.Combine("FileMultimediali","Video", videoPaths[currentVideoId].path));
         videoTitle.text = videoPaths[currentVideoId].path;
     }
 
