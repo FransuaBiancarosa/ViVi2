@@ -186,11 +186,14 @@ public class HandleActionLabel : MonoBehaviour
     public void PlayStopAnimationAction()
     {
         Debug.Log("Animation Action");
+        
     }
 
     public void AudioIconAction()
     {
         Debug.Log("Audio Action");
+        AudioHandler.singleton.SetUpAudioHandler(avaibleActions["audio"].paths, gameObject.transform.position);
+
     }
 
     public void VideoIconAction()
@@ -202,10 +205,14 @@ public class HandleActionLabel : MonoBehaviour
     public void ImageIconAction()
     {
         Debug.Log("Image Action");
+        ImageHandler.singleton.SetUpImageHandler(avaibleActions["immagine"].paths, gameObject.transform.position);
+
     }
     public void TextIconAction()
     {
         Debug.Log("Text Action");
+        TextHandler.singleton.SetUpTextHandler(avaibleActions["testo"].paths, gameObject.transform.position);
+
     }
 
     public void TeleportIconAction()

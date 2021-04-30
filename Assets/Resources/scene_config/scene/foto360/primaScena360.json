@@ -37,7 +37,7 @@
       "scala": [1, 1, 1],
       "puntiDiInterazione": [
         {
-          "posizione": [0, 0, -1],
+          "posizione": [0.5,0, -1],
           "rotazione": [0, 0, 0],
           "scala": [1, 1, 1],
           "azioni": [
@@ -48,22 +48,30 @@
             {
               "tipo": "video",
               "input": [{ "path": "video1"},{"path": "video2" }]
+            },
+			{
+              "tipo": "audio",
+              "input": [{ "path": "audio1"},{"path": "audio2" }]
             }
           ],
           "owner": [1, 2]
         },
         {
-          "posizione": [0, -1, -1],
+          "posizione": [0.5, -1, -1],
           "rotazione": [0, 0, 0],
           "scala": [1, 1, 1],
           "azioni": [
             {
-              "tipo": "animazione",
-              "input": [{ "path": "gira" }]
+              "tipo": "immagine",
+              "input": [{ "path": "immagine1"},{"path": "immagine2" }]
             },
             {
               "tipo": "testo",
-              "input": [{ "path": "http://www.google.it" }]
+              "input": [{ "path": "testo1"},{"path": "testo2" }]
+            },
+			{
+              "tipo": "teletrasporto",
+              "input": [{ "path": "0"}]
             }
           ],
           "owner": [1, 2]
