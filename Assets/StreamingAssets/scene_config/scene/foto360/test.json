@@ -1,0 +1,77 @@
+{
+  "tipo": "foto360",
+  "id": 0,
+  "hostSfondo": "xenon_pdv1_material",
+  "hostSpawnPos": [0, 1.7, 0],
+  "guestInfos": [{
+    "posizione": [-8.0,1.7,0.0],
+    "sfondo": "xenon_pdv2_material"
+  }],
+  "teletrasporti": [
+    {
+      "tipo": "teletrasporto",
+      "gobject": "Teleport",
+      "posizione": [0, 1.6, 2.9],
+      "rotazione": [0, 0, 0],
+      "scala": [1, 1, 1],
+      "destinazione": 1
+    }
+  ],
+  "oggettiAumentati":
+	[
+		{
+			
+			"tipo":"object3D"
+			"network":true,
+			"gobject":"cilindro"
+			"posizione":[0,2,0],
+			"rotazione":[0,0,0],
+			"scala":[1,1,1],
+			"puntiDiInterazione":[
+									{
+										 "posizione":[0,0,0],
+										 "rotazione":[0,0,0],
+										 "scala":[1,1,1],
+										 "azioni":[
+													{
+														"tipo":"animazione",
+														"input":[{"path":"gira"}]
+													},
+													{
+														"tipo":"link",
+														"input":[{"path":"http://www.google.it"}]
+													}
+												  ],										 
+										 "owner":[1,2]
+									}
+								 ]
+		},
+		{
+			
+			"tipo":"object3D"
+			"network":true,
+			"gobject":"sfera"
+			"posizione":[0,0,0],
+			"rotazione":[0,0,0],
+			"scala":[1,1,1],
+			"puntiDiInterazione":[
+									{
+										 "posizione":[0,0,0],
+										 "rotazione":[0,0,0],
+										 "scala":[1,1,1],
+										 "azioni":[
+													{
+														"tipo":"animazione",
+														"input":[{"path":"gira"}]
+													},
+													{
+														"tipo":"link",
+														"input":[{"path":"http://www.google.it"}]
+													}
+												  ],										 
+										 "owner":[1,2]
+									}
+								 ]
+		}
+	]
+}

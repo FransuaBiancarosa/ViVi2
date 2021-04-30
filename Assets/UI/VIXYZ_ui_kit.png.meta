@@ -1,0 +1,1235 @@
+fileFormatVersion: 2
+guid: 05e6d14bda1871d41b4c5d5fdec6b80d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5932465055658836645
+    second: VIXYZ_ui_anim_menu
+  - first:
+      213: 3708502846034923007
+    second: VIXYZ_ui_RepLoop
+  - first:
+      213: 4792662705541345809
+    second: VIXYZ_pause
+  - first:
+      213: -4816924331842748186
+    second: VIXYZ_ui_logo
+  - first:
+      213: 1222911666215078876
+    second: VIXYZ_ui_fullscreen
+  - first:
+      213: 8429471471858124659
+    second: VIXYZ_ui_red_close
+  - first:
+      213: -5906701179957240166
+    second: VIXYZ_ui_play
+  - first:
+      213: 5973539806052679961
+    second: VIXYZ_ui_stop
+  - first:
+      213: -589098735349707299
+    second: VIXYZ_ui_resetcamera
+  - first:
+      213: -1190865256805813354
+    second: VIXYZ_ui_help
+  - first:
+      213: -4484519639779151217
+    second: VIXYZ_ui_RepOnce
+  - first:
+      213: 6867489205202252365
+    second: VIXYZ_ui_loading2
+  - first:
+      213: -1007451578633737681
+    second: VIXYZ_loading
+  - first:
+      213: -6931895387561007426
+    second: VIXYZ_ui_WHITEBAR
+  - first:
+      213: 7077703487695481197
+    second: VIXYZ_ui_PanHelp
+  - first:
+      213: 6539317419637631962
+    second: VIXYZ_ui_disable_FullScreen
+  - first:
+      213: 8242800699640440633
+    second: VIXYZ_ui_BarArrow
+  - first:
+      213: -6830005426979101753
+    second: VIXYZ_ui_PlaybarCursor
+  - first:
+      213: -6830005426979101753
+    second: VIXYZ_ui_Cursor
+  - first:
+      213: -389178773931725995
+    second: VIXYZ_ui_BGIcons
+  - first:
+      213: 9097651473223479998
+    second: VIXYZ_ui_smallClose
+  - first:
+      213: 6079025650191446575
+    second: VIXYZ_ui_BGCube
+  - first:
+      213: -2044255494807215577
+    second: VIXYZ_ui_CubeLeftArrow
+  - first:
+      213: -1897657156684020787
+    second: VIXYZ_ui_CubeRightArrow
+  - first:
+      213: -4154671513658873983
+    second: VIXYZ_ui_MoveStartHelp
+  - first:
+      213: 5085486109382294615
+    second: VIXYZ_ui_RotateHelp
+  - first:
+      213: 1333093402181174028
+    second: VIXYZ_ui_ZoomHelp
+  - first:
+      213: -4819299121378854456
+    second: VIXYZ_ui_Pan3DHelp
+  - first:
+      213: -8466209442692053538
+    second: VIXYZ_ui_circle
+  - first:
+      213: 7624796450385915270
+    second: VIXYZ_ui_MouseLB
+  - first:
+      213: -1785462287461255046
+    second: VIXYZ_ui_Mouse_CB
+  - first:
+      213: 7380813628414656474
+    second: VIXYZ_ui_MouseRB
+  - first:
+      213: -4735278545925208649
+    second: VIXYZ_ui_WASD
+  - first:
+      213: -7284258586603430865
+    second: VIXYZ_Hand
+  - first:
+      213: 384406509827677129
+    second: VIXYZ_ui_hand2
+  - first:
+      213: 8587204161598447926
+    second: VIXYZ_ui_lil_arrow
+  - first:
+      213: -2965457118138951445
+    second: VIXYZ_ui_Hotpoint
+  - first:
+      213: -8552292196969419381
+    second: VIXYZ_ui_Animation
+  - first:
+      213: -7799336272264504488
+    second: VIXYZ_ui_Info
+  - first:
+      213: 3929102635739631614
+    second: VIXYZ_ui_3DModel
+  - first:
+      213: -2604417191055071087
+    second: VIXYZ_ui_Link
+  - first:
+      213: -9178400361021744933
+    second: VIXYZ_ui_ButtonBG
+  - first:
+      213: -7879278726281101698
+    second: VIXYZ_ui_ShowIcon
+  - first:
+      213: -1051711730590804067
+    second: VIXYZ_ui_ShowMenu
+  - first:
+      213: 7502967335941869709
+    second: VIXYZ_ui_HideIcon
+  - first:
+      213: -5824666521679266453
+    second: VIXYZ_ui_SmallLoading
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VIXYZ_ui_anim_menu
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 1629
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d7903a676abada0800000000000000
+      internalID: -5932465055658836645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_pause
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 1522
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112fd0c8655f28240800000000000000
+      internalID: 4792662705541345809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_logo
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1636
+        width: 1049
+        height: 387
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0c39267d8d62db0800000000000000
+      internalID: -4816924331842748186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_fullscreen
+      rect:
+        serializedVersion: 2
+        x: 2537
+        y: 1522
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb4e606ea7a8f010800000000000000
+      internalID: 1222911666215078876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_red_close
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 1622
+        width: 86
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377846474af7bf470800000000000000
+      internalID: 8429471471858124659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_play
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1629
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e9446629e270ea0800000000000000
+      internalID: -5906701179957240166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_stop
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 1629
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9110d6fedc646e250800000000000000
+      internalID: 5973539806052679961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_resetcamera
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 1631
+        width: 77
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd49d542d913d7f0800000000000000
+      internalID: -589098735349707299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_help
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1628
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6933cb0cb52397fe0800000000000000
+      internalID: -1190865256805813354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_loading2
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 786
+        width: 549
+        height: 548
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42f8eeeb093e4f50800000000000000
+      internalID: 6867489205202252365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_loading
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 790
+        width: 540
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a212f7020d402f0800000000000000
+      internalID: -1007451578633737681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_WHITEBAR
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 1819
+        width: 522
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 4, z: 4, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6e14c2fd5fccf90800000000000000
+      internalID: -6931895387561007426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_disable_FullScreen
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 1627
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb660fdb8250ca50800000000000000
+      internalID: 6539317419637631962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_BarArrow
+      rect:
+        serializedVersion: 2
+        x: 3778
+        y: 1790
+        width: 55
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937e868609f446270800000000000000
+      internalID: 8242800699640440633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_Cursor
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 314
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3abe64042f631a0800000000000000
+      internalID: -6830005426979101753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_BGIcons
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 1601
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b6da197fb599af0800000000000000
+      internalID: -389178773931725995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_smallClose
+      rect:
+        serializedVersion: 2
+        x: 2749
+        y: 1645
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb27bcf30d9514e70800000000000000
+      internalID: 9097651473223479998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_BGCube
+      rect:
+        serializedVersion: 2
+        x: 3605
+        y: 1024
+        width: 401
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22362cee990d5450800000000000000
+      internalID: 6079025650191446575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_CubeLeftArrow
+      rect:
+        serializedVersion: 2
+        x: 3580
+        y: 766
+        width: 259
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72220e9557851a3e0800000000000000
+      internalID: -2044255494807215577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_CubeRightArrow
+      rect:
+        serializedVersion: 2
+        x: 3878
+        y: 717
+        width: 182
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc30f56ceda2aa5e0800000000000000
+      internalID: -1897657156684020787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_RepLoop
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1526
+        width: 89
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffdcf62a0bf377330800000000000000
+      internalID: 3708502846034923007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_RepOnce
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 1529
+        width: 83
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8273bac529c3c1c0800000000000000
+      internalID: -4484519639779151217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_MoveStartHelp
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 290
+        width: 209
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187aded4544a756c0800000000000000
+      internalID: -4154671513658873983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_RotateHelp
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 545
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c3ae32ca6439640800000000000000
+      internalID: 5085486109382294615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_ZoomHelp
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 545
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c030d61e269108210800000000000000
+      internalID: 1333093402181174028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_PanHelp
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 545
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69e1a1a2dd093260800000000000000
+      internalID: 7077703487695481197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_Pan3DHelp
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 545
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c97cdb9bf86e1db0800000000000000
+      internalID: -4819299121378854456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_MouseLB
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 293
+        width: 143
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d69e549f7b0d960800000000000000
+      internalID: 7624796450385915270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_Mouse_CB
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 293
+        width: 143
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78f3046283c837e0800000000000000
+      internalID: -1785462287461255046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_MouseRB
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 293
+        width: 143
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf740bc3eaed6660800000000000000
+      internalID: 7380813628414656474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_WASD
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 275
+        width: 359
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b589954049e84eb0800000000000000
+      internalID: -4735278545925208649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_circle
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 792
+        width: 543
+        height: 542
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed548462e5bf18a80800000000000000
+      internalID: -8466209442692053538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_Hand
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 286
+        width: 161
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2cd96db86d19ea90800000000000000
+      internalID: -7284258586603430865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_hand2
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 282
+        width: 166
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb50ab1fafa55500800000000000000
+      internalID: 384406509827677129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_lil_arrow
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 472
+        width: 68
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631e4d120b0eb2770800000000000000
+      internalID: 8587204161598447926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_Hotpoint
+      rect:
+        serializedVersion: 2
+        x: 2851
+        y: 1424
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be89ca4767498d6d0800000000000000
+      internalID: -2965457118138951445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_Animation
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 1425
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8dea401f87205980800000000000000
+      internalID: -8552292196969419381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_Info
+      rect:
+        serializedVersion: 2
+        x: 3106
+        y: 1424
+        width: 110
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bdad7abf033c390800000000000000
+      internalID: -7799336272264504488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_3DModel
+      rect:
+        serializedVersion: 2
+        x: 3234
+        y: 1425
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effcf49a70af68630800000000000000
+      internalID: 3929102635739631614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_Link
+      rect:
+        serializedVersion: 2
+        x: 3362
+        y: 1425
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198ed301d504bdbd0800000000000000
+      internalID: -2604417191055071087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_ButtonBG
+      rect:
+        serializedVersion: 2
+        x: 2851
+        y: 1284
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd85bfa3085cf9080800000000000000
+      internalID: -9178400361021744933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_ShowIcon
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 1528
+        width: 78
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ef8b1aebd27a290800000000000000
+      internalID: -7879278726281101698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_ShowMenu
+      rect:
+        serializedVersion: 2
+        x: 2283
+        y: 1520
+        width: 66
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d971604d0c19761f0800000000000000
+      internalID: -1051711730590804067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_HideIcon
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 1428
+        width: 78
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d809c242a05ef1860800000000000000
+      internalID: 7502967335941869709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VIXYZ_ui_SmallLoading
+      rect:
+        serializedVersion: 2
+        x: 2125
+        y: 896
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d7230b8a0aa2fa0800000000000000
+      internalID: -5824666521679266453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2ca9866b430b9f64aba9b4fc1dbbb637
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

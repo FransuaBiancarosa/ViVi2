@@ -1,0 +1,103 @@
+{
+  "tipo": "foto360",
+  "id": 0,
+  "hostSfondo": "XENON",
+  "hostSpawnPos": [0, 1.7, 0],
+  "guestInfos": [{
+    "posizione": [-8.0,1.7,0.0],
+    "sfondo": "XENON2"
+  }],
+  "teletrasporti": 
+  [
+    {
+      "tipo": "teletrasporto",
+      "gobject": "TeletrasportoTipo1",
+      "posizione": [-4, 1.6, 2.9],
+      "rotazione": [0, 0, 0],
+      "scala": [1, 1, 1],
+      "destinazione": 0
+    },
+	{
+      "tipo": "teletrasporto",
+      "gobject": "TeletrasportoTipo1",
+      "posizione": [-4, 1.6, -2.9],
+      "rotazione": [0, 0, 0],
+      "scala": [1, 1, 1],
+      "destinazione": 0
+    }
+	
+  ],
+  "oggettiAumentati":
+	[
+		{			
+			"tipo":"oggetto3D",
+			"network":true,
+			"gobject":"cilindro",
+			"posizione":[2,2,7],
+			"rotazione":[0,0,0],
+			"scala":[1,1,1],
+			"puntiDiInterazione":[
+									{
+										 "posizione":[0,0,0],
+										 "rotazione":[0,0,0],
+										 "scala":[1,1,1],
+										 "azioni":[
+													{
+														"tipo":"animazione",
+														"input":[{"path":"gira"}]
+													},
+													{
+														"tipo":"link",
+														"input":[{"path":"http://www.google.it"}]
+													}
+												  ],										 
+										 "owner":[1,2]
+									},
+									{
+										 "posizione":[0,-1,0],
+										 "rotazione":[0,0,0],
+										 "scala":[1,1,1],
+										 "azioni":[
+													{
+														"tipo":"animazione",
+														"input":[{"path":"gira"}]
+													},
+													{
+														"tipo":"testo",
+														"input":[{"path":"http://www.google.it"}]
+													}
+												  ],										 
+										 "owner":[1,2]
+									}
+								 ]
+		},
+		{
+			
+			"tipo":"icona",
+			"network":true,
+			"gobject":"icona",
+			"posizione":[0,0,-3],
+			"rotazione":[0,0,0],
+			"scala":[1,1,1],
+			"puntiDiInterazione":[
+									{
+										 "posizione":[0,0,5],
+										 "rotazione":[0,0,0],
+										 "scala":[1,1,1],
+										 "azioni":[
+													{
+														"tipo":"animazione",
+														"input":[{"path":"gira"}]
+													},
+													{
+														"tipo":"testo",
+														"input":[{"path":"http://www.google.it"}]
+													}
+												  ],										 
+										 "owner":[1,2]
+									}
+								 ]
+		}
+	]
+  
+}

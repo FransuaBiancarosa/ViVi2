@@ -1,0 +1,23 @@
+{
+  "id": 1,
+  "ip": "192.168.0.214",
+  "port": "7778",
+  "scene": [
+    {
+      "tipo": "3D",
+      "json": "ScenaIniziale"
+    },
+    {
+      "tipo": "foto360",
+      "json": "primaScena360"
+    },
+    {
+      "tipo": "video360",
+      "json": "path"
+    },
+    {
+      "tipo": "3D",
+      "json": "scena4"
+    }
+  ]
+}
