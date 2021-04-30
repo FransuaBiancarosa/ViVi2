@@ -4170,6 +4170,7 @@ GameObject:
   - component: {fileID: 484717491}
   - component: {fileID: 484717490}
   - component: {fileID: 484717489}
+  - component: {fileID: 484717494}
   m_Layer: 5
   m_Name: TextPlayerCanvas
   m_TagString: Untagged
@@ -4295,6 +4296,25 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &484717494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484717487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aaf960227867044282d921171d2d7ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 3
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  pointer: {fileID: 0}
+  sortOrder: 0
 --- !u!4 &521377567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7078722787440015773, guid: 18d0745511d9d5442bb224196ca83cc1,
@@ -5826,7 +5846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &875499282
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6321,7 +6341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1598ecf8125e79448f3581c09af32ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserBeamAppearance: 2
+  laserBeamAppearance: 0
   rightPointer: {fileID: 444987730}
 --- !u!1 &1004571075
 GameObject:
@@ -10088,7 +10108,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635570754}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
