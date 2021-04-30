@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../dissonance.png">
+  
+  <meta name="google-site-verification" content="PcruPlNwdq73WM-Jvo9loUQQzOlcyjaYAmgNJu16nlY" />
+
+  <title>VoicePlayerState - Dissonance: Unity Voice Chat</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link href="../../css/pygment_tweaks.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "VoicePlayerState";
+    var mkdocs_page_input_path = "Reference\\Other\\VoicePlayerState.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46722926-2', 'dissonance.readthedocs.io');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="icon icon-home"> Dissonance: Unity Voice Chat</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Project Setup</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Basics/Getting-Started.html">Getting Started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Choosing-A-Network.html">Network Integrations</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation Requirements</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Basics/Licensing.html">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Windows Desktop.html">Windows (Desktop)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Windows UWP & Hololens.html">Windows (UWP/Hololens)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Linux.html">Linux</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/MacOS.html">MacOS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Android & Oculus Go.html">Android (Including Oculus Go)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/iOS.html">iOS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Magic Leap.html">Magic Leap</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Quick Start Guides</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Forge-Remastered.html">Forge Networking Remastered</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-DR2.html">Dark Rift 2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Photon.html">Photon Unity Networking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Photon-Bolt.html">Photon BOLT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-UNet-HLAPI.html">Unity Networking HLAPI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Mirror.html">Mirror Networking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Steamworks.Net-P2P.html">Steamworks.NET P2P</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-UNet-LLAPI.html">Unity Networking LLAPI (self contained)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-PureP2P.html">WebRTC Network (self contained)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Basics/Introduction-To-Chat-Rooms.html">Basic Concepts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Introductory Tutorials</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Push-to-Talk.html">Push-To-Talk</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Global-Chat-Room.html">Global Chat Room</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Team-Chat-Rooms.html">Team Chat Rooms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Text-Chat.html">Text Chat</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Direct-Player-Transmit.html">Transmit to Player</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Position-Tracking.html">Position Tracking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Position-Tracking-For-Bolt.html">Position Tracking For BOLT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Proximity-Chat.html">Proximity Chat</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Collider-Chat-Room.html">Collider Chat Rooms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Player-State.html">Finding Players</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Audio-Mixing.html">Audio Mixing For Voice</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Access-Control-Tokens.html">Access Tokens</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Channel-Priority.html">Channel Priority</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Channel-Volume.html">Channel Volume</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Playback-Prefab.html">Custom Playback Prefab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Script-Controlled-Speech.html">Script Controlled Speech</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Spatializer-Plugin.html">Spatialization Plugins</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Advanced Tutorials</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Custom-Networking.html">Writing A Custom Network Integration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Custom-Position-Tracking.html">Writing A Custom IDissonancePlayer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Custom-Microphone-Capture.html">Writing A Custom Microphone Capture System</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Directly-Using-Channels.html">Using Channels</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Acoustic-Echo-Cancellation.html">Acoustic Echo Cancellation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Assembly-Definitions.html">Assembly Definitions</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Reference</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Components</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Components/Voice-Broadcast-Trigger.html">Voice Broadcast Trigger</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Components/Voice-Receipt-Trigger.html">Voice Receipt Trigger</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Components/Dissonance-Comms.html">Dissonance Comms</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Audio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Audio/VoiceSettings.html">Voice Settings</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Networking</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Networking/Network-Protocol.html">Network Protocol</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Other</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="Rooms.html">Rooms</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="RoomChannels.html">RoomChannels</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="RoomChannel.html">RoomChannel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="PlayerChannels.html">PlayerChannels</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="PlayerChannel.html">PlayerChannel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="TextChat.html">TextChat</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="VoicePlayerState.html">VoicePlayerState</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#voiceplayerstate">VoicePlayerState</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#events">Events</a></li>
+        
+            <li><a class="toctree-l5" href="#read-only-properties">Read Only Properties</a></li>
+        
+            <li><a class="toctree-l5" href="#properties">Properties</a></li>
+        
+            <li><a class="toctree-l5" href="#methods">Methods</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="RemoteChannel.html">RemoteChannel</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Dissonance: Unity Voice Chat</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Other &raquo;</li>
+        
+      
+        
+          <li>Reference &raquo;</li>
+        
+      
+    
+    <li>VoicePlayerState</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Placeholder-Software/Dissonance/edit/master/docs/Reference/Other/VoicePlayerState.md"> Edit on Issue Tracker</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="voiceplayerstate">VoicePlayerState</h1>
+<p>This object exposes properties to do with other players in a Dissonance session. There is one of these objects per player (including the local player) in the <code>Players</code> property on the DissonanceComms component. You can also get one of these objects for a specific player with the <code>FindPlayer</code> method on the DissonanceComms component.</p>
+<div class="codehilite"><pre><span></span><span class="c1">//Get your comms component</span>
+<span class="n">DissonanceComms</span> <span class="n">comms</span><span class="p">;</span>
+
+<span class="c1">//Get a specific player</span>
+<span class="n">VoicePlayerState</span> <span class="n">player</span> <span class="p">=</span> <span class="n">comms</span><span class="p">.</span><span class="n">FindPlayer</span><span class="p">(</span><span class="s">&quot;Player ID&quot;</span><span class="p">);</span>
+
+<span class="c1">//Enumerate all players in the session</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">var</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">comms</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+    <span class="n">VoicePlayerState</span> <span class="n">player</span> <span class="p">=</span> <span class="n">comms</span><span class="p">.</span><span class="n">Players</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="events">Events</h2>
+<h3 id="onstartedspeaking-actionvoiceplayerstate">OnStartedSpeaking : Action&lt;VoicePlayerState&gt;</h3>
+<p>This event is raised every time this player starts speaking. It is passed the state object for this player.</p>
+<div class="codehilite"><pre><span></span>VoicePlayerState.OnStartedSpeaking += player =&amp;gt; {
+    Debug.Log(&quot;Player &quot; + player.Name + &quot; Started Speaking&quot;);
+}
+</pre></div>
+
+
+<h3 id="onstoppedspeaking-actionvoiceplayerstate">OnStoppedSpeaking : Action&lt;VoicePlayerState&gt;</h3>
+<p>This event is raised every time this player stops speaking. It is passed the state object for this player.</p>
+<div class="codehilite"><pre><span></span>VoicePlayerState.OnStoppedSpeaking += player =&amp;gt; {
+    Debug.Log(&quot;Player &quot; + player.Name + &quot; Stopped Speaking&quot;);
+}
+</pre></div>
+
+
+<h3 id="onenteredroom-actionvoiceplayerstate-string">OnEnteredRoom : Action&lt;VoicePlayerState, string&gt;</h3>
+<p>This event is raised every time this player begins listening to a new room. It is passed the state object for this player and the name of the room.</p>
+<div class="codehilite"><pre><span></span>VoicePlayerState.OnEnteredRoom += (player, room) =&amp;gt; {
+    Debug.Log(&quot;Player &quot; + player.Name + &quot; began listening to room &quot; + room);
+}
+</pre></div>
+
+
+<h3 id="onexitedroom-actionvoiceplayerstate-string">OnExitedRoom : Action&lt;VoicePlayerState, string&gt;</h3>
+<p>This event is raised every time this player stops listening to a room. It is passed the state object for this player and the name of the room.</p>
+<div class="codehilite"><pre><span></span>VoicePlayerState.OnExitedRoom += (player, room) =&amp;gt; {
+    Debug.Log(&quot;Player &quot; + player.Name + &quot; stopped listening to room &quot; + room);
+}
+</pre></div>
+
+
+<h3 id="onleftsession-actionvoiceplayerstate">OnLeftSession : Action&lt;VoicePlayerState&gt;</h3>
+<p>This event is raised when the player leaves the session. After this the session object will never be used again. Even if the same player rejoins with the same name, they will be assigned a new state object.</p>
+<div class="codehilite"><pre><span></span>VoicePlayerState.OnLeftSession += player =&amp;gt; {
+    Debug.Log(&quot;Player &quot; + player.Name + &quot; Left Session&quot;);
+}
+</pre></div>
+
+
+<h2 id="read-only-properties">Read Only Properties</h2>
+<h3 id="name-string">Name : String</h3>
+<p>The name of this player. This is the value in the <code>DissonanceComms:LocalPlayerName</code> property for that player.</p>
+<div class="codehilite"><pre><span></span>DissonanceComms comms;
+VoicePlayerState aPlayer;
+if (aPlayer.Name == comms.LocalPlayerName) {
+    Debug.Log(aPlayer.Name + &quot; is the local player&quot;);
+}
+</pre></div>
+
+
+<h3 id="isconnected-bool">IsConnected : bool</h3>
+<p>Get a value indicating if this player is currently in the session.</p>
+<h3 id="isspeaking-bool">IsSpeaking : bool</h3>
+<p>Get a value indicating if this player is currently speaking</p>
+<h3 id="amplitude-float">Amplitude : float</h3>
+<p>Get the current amplitude of the speech from this player. Value is in the range of 0 to 1. When using this value remember that 1 is the loudest value that can possibly be produced by the audio system - in most circumstances a speech signal will be <em>very</em> quiet (0 to 0.05 or less).</p>
+<h3 id="speakerpriority-channelpriority">SpeakerPriority : ChannelPriority?</h3>
+<p>Get the current priority of speech from this speaker. Null if the player is not speaking.</p>
+<h3 id="rooms-readonlycollectionstring">Rooms : ReadOnlyCollection&lt;string&gt;</h3>
+<p>Get the list of rooms this player is currently listening to.</p>
+<h3 id="packetloss-float">PacketLoss : float?</h3>
+<p>Get the estimated packet loss (0 to 1) to/from this player. May be null if the player has disconnected or packet loss has not yet been measured.</p>
+<h3 id="playback-voiceplayback">Playback : VoicePlayback</h3>
+<p>Get the <code>VoicePlayback</code> component associated with this player. May be null if Dissonance is still setting up playback for this player, or the player has left the session.</p>
+<h3 id="tracker-idissonanceplayer">Tracker : IDissonancePlayer</h3>
+<p>Get the <code>IDissonancePlayer</code> component associated with this player. May be null if Dissonance is still setting up tracking for this player, this player does not have a <code>IDissonancePlayer</code> component, or the player has left the session.</p>
+<h2 id="properties">Properties</h2>
+<h3 id="volume-float">Volume : float</h3>
+<p>Get or set the Volume which speech from the player should be played at. The value is a direct multiplier applied to the audio and should be in the range 0 to 1.</p>
+<h3 id="islocallymuted-bool">IsLocallyMuted : bool</h3>
+<p>Get or set if this player is locally muted and will not produce any audio on the local machine.</p>
+<h2 id="methods">Methods</h2>
+<h3 id="getspeakingchannelschannels-list">GetSpeakingChannels(channels: List<RemoteChannel>)</h3>
+<p>Get a snapshot of the channels you are hearing this speaker through. If they are not speaking to you then this will return no results. The <code>channels</code> parameter passed in must not be null, the list will be cleared and then filled with the current snapshot.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="RemoteChannel.html" class="btn btn-neutral float-right" title="RemoteChannel">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="TextChat.html" class="btn btn-neutral" title="TextChat"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a href='https://placeholder-software.co.uk/dissonance/'>Placeholder Software</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="TextChat.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="RemoteChannel.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

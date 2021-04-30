@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../dissonance.png">
+  
+  <meta name="google-site-verification" content="PcruPlNwdq73WM-Jvo9loUQQzOlcyjaYAmgNJu16nlY" />
+
+  <title>Proximity Chat - Dissonance: Unity Voice Chat</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link href="../css/pygment_tweaks.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Proximity Chat";
+    var mkdocs_page_input_path = "Tutorials\\Proximity-Chat.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46722926-2', 'dissonance.readthedocs.io');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Dissonance: Unity Voice Chat</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Project Setup</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Basics/Getting-Started.html">Getting Started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Choosing-A-Network.html">Network Integrations</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation Requirements</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Basics/Licensing.html">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Windows Desktop.html">Windows (Desktop)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Windows UWP & Hololens.html">Windows (UWP/Hololens)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Linux.html">Linux</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/MacOS.html">MacOS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Android & Oculus Go.html">Android (Including Oculus Go)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/iOS.html">iOS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Magic Leap.html">Magic Leap</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Quick Start Guides</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Forge-Remastered.html">Forge Networking Remastered</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-DR2.html">Dark Rift 2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Photon.html">Photon Unity Networking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Photon-Bolt.html">Photon BOLT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-UNet-HLAPI.html">Unity Networking HLAPI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Mirror.html">Mirror Networking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Steamworks.Net-P2P.html">Steamworks.NET P2P</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-UNet-LLAPI.html">Unity Networking LLAPI (self contained)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-PureP2P.html">WebRTC Network (self contained)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Basics/Introduction-To-Chat-Rooms.html">Basic Concepts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Introductory Tutorials</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="Push-to-Talk.html">Push-To-Talk</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Global-Chat-Room.html">Global Chat Room</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Team-Chat-Rooms.html">Team Chat Rooms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Text-Chat.html">Text Chat</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Direct-Player-Transmit.html">Transmit to Player</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Position-Tracking.html">Position Tracking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Position-Tracking-For-Bolt.html">Position Tracking For BOLT</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="Proximity-Chat.html">Proximity Chat</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#proximity-chat">Proximity Chat</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Collider-Chat-Room.html">Collider Chat Rooms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Player-State.html">Finding Players</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Audio-Mixing.html">Audio Mixing For Voice</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Access-Control-Tokens.html">Access Tokens</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Channel-Priority.html">Channel Priority</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Channel-Volume.html">Channel Volume</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Playback-Prefab.html">Custom Playback Prefab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Script-Controlled-Speech.html">Script Controlled Speech</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Spatializer-Plugin.html">Spatialization Plugins</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Advanced Tutorials</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="Custom-Networking.html">Writing A Custom Network Integration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Custom-Position-Tracking.html">Writing A Custom IDissonancePlayer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Custom-Microphone-Capture.html">Writing A Custom Microphone Capture System</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Directly-Using-Channels.html">Using Channels</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Acoustic-Echo-Cancellation.html">Acoustic Echo Cancellation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Assembly-Definitions.html">Assembly Definitions</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Reference</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Components</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Components/Voice-Broadcast-Trigger.html">Voice Broadcast Trigger</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Components/Voice-Receipt-Trigger.html">Voice Receipt Trigger</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Components/Dissonance-Comms.html">Dissonance Comms</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Audio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Audio/VoiceSettings.html">Voice Settings</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Networking</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Networking/Network-Protocol.html">Network Protocol</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Other</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/Rooms.html">Rooms</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/RoomChannels.html">RoomChannels</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/RoomChannel.html">RoomChannel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/PlayerChannels.html">PlayerChannels</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/PlayerChannel.html">PlayerChannel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/TextChat.html">TextChat</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/VoicePlayerState.html">VoicePlayerState</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/RemoteChannel.html">RemoteChannel</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Dissonance: Unity Voice Chat</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Introductory Tutorials &raquo;</li>
+        
+      
+    
+    <li>Proximity Chat</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Placeholder-Software/Dissonance/edit/master/docs/Tutorials/Proximity-Chat.md"> Edit on Issue Tracker</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="proximity-chat">Proximity Chat</h1>
+<p>Also see <a href="https://youtu.be/HXMYDbuLwVI?t=323">this video</a> about proximity chat rooms.</p>
+<p>This tutorial will explain how to build a proximity chat system where players can only talk to other players who are standing close to them. How this will work in your game depends upon exactly how you create player objects - feel free to <a href="https://www.reddit.com/r/dissonance_voip/">ask for help</a>.</p>
+<p>Proximity chat rooms work by combining <a href="Direct-Player-Transmit.html">direct player transmission</a> and <a href="Collider-Chat-Room.html">collider chat rooms</a>. Each player in your game should have a voice broadcast trigger attached to it (set to broadcast directly to that player) and configured as a collider chat room with a suitable collision volume (e.g. a large sphere). When two players stand close to one another they will enter each others transmission trigger volumes and begin talking to one another.</p>
+<p><img alt="Player Proximity Chat" src="../images/PlayerProximityChat_Inspector.png" /></p>
+<p>In this example channel type is set to "Self", this means the broadcast trigger searches for one of the Dissonance <a href="Position-Tracking.html">position tracking</a> behaviours and transmits directly to the player which that represents.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Collider-Chat-Room.html" class="btn btn-neutral float-right" title="Collider Chat Rooms">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="Position-Tracking-For-Bolt.html" class="btn btn-neutral" title="Position Tracking For BOLT"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a href='https://placeholder-software.co.uk/dissonance/'>Placeholder Software</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="Position-Tracking-For-Bolt.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="Collider-Chat-Room.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

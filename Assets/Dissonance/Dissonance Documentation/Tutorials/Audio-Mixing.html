@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../dissonance.png">
+  
+  <meta name="google-site-verification" content="PcruPlNwdq73WM-Jvo9loUQQzOlcyjaYAmgNJu16nlY" />
+
+  <title>Audio Mixing For Voice - Dissonance: Unity Voice Chat</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link href="../css/pygment_tweaks.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Audio Mixing For Voice";
+    var mkdocs_page_input_path = "Tutorials\\Audio-Mixing.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46722926-2', 'dissonance.readthedocs.io');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Dissonance: Unity Voice Chat</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Project Setup</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Basics/Getting-Started.html">Getting Started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Choosing-A-Network.html">Network Integrations</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation Requirements</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Basics/Licensing.html">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Windows Desktop.html">Windows (Desktop)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Windows UWP & Hololens.html">Windows (UWP/Hololens)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Linux.html">Linux</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/MacOS.html">MacOS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Android & Oculus Go.html">Android (Including Oculus Go)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/iOS.html">iOS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Magic Leap.html">Magic Leap</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Quick Start Guides</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Forge-Remastered.html">Forge Networking Remastered</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-DR2.html">Dark Rift 2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Photon.html">Photon Unity Networking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Photon-Bolt.html">Photon BOLT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-UNet-HLAPI.html">Unity Networking HLAPI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Mirror.html">Mirror Networking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Steamworks.Net-P2P.html">Steamworks.NET P2P</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-UNet-LLAPI.html">Unity Networking LLAPI (self contained)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-PureP2P.html">WebRTC Network (self contained)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Basics/Introduction-To-Chat-Rooms.html">Basic Concepts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Introductory Tutorials</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="Push-to-Talk.html">Push-To-Talk</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Global-Chat-Room.html">Global Chat Room</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Team-Chat-Rooms.html">Team Chat Rooms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Text-Chat.html">Text Chat</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Direct-Player-Transmit.html">Transmit to Player</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Position-Tracking.html">Position Tracking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Position-Tracking-For-Bolt.html">Position Tracking For BOLT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Proximity-Chat.html">Proximity Chat</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Collider-Chat-Room.html">Collider Chat Rooms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Player-State.html">Finding Players</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="Audio-Mixing.html">Audio Mixing For Voice</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#tutorial-audio-mixing">Tutorial: Audio Mixing</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#general-principles">General Principles</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#volume-ducking">Volume Ducking</a></li>
+    
+
+    <li class="toctree-l3"><a href="#sound-effects">Sound Effects</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Access-Control-Tokens.html">Access Tokens</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Channel-Priority.html">Channel Priority</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Channel-Volume.html">Channel Volume</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Playback-Prefab.html">Custom Playback Prefab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Script-Controlled-Speech.html">Script Controlled Speech</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Spatializer-Plugin.html">Spatialization Plugins</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Advanced Tutorials</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="Custom-Networking.html">Writing A Custom Network Integration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Custom-Position-Tracking.html">Writing A Custom IDissonancePlayer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Custom-Microphone-Capture.html">Writing A Custom Microphone Capture System</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Directly-Using-Channels.html">Using Channels</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Acoustic-Echo-Cancellation.html">Acoustic Echo Cancellation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Assembly-Definitions.html">Assembly Definitions</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Reference</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Components</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Components/Voice-Broadcast-Trigger.html">Voice Broadcast Trigger</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Components/Voice-Receipt-Trigger.html">Voice Receipt Trigger</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Components/Dissonance-Comms.html">Dissonance Comms</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Audio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Audio/VoiceSettings.html">Voice Settings</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Networking</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Networking/Network-Protocol.html">Network Protocol</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Other</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/Rooms.html">Rooms</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/RoomChannels.html">RoomChannels</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/RoomChannel.html">RoomChannel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/PlayerChannels.html">PlayerChannels</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/PlayerChannel.html">PlayerChannel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/TextChat.html">TextChat</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/VoicePlayerState.html">VoicePlayerState</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/RemoteChannel.html">RemoteChannel</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Dissonance: Unity Voice Chat</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Introductory Tutorials &raquo;</li>
+        
+      
+    
+    <li>Audio Mixing For Voice</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Placeholder-Software/Dissonance/edit/master/docs/Tutorials/Audio-Mixing.md"> Edit on Issue Tracker</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="tutorial-audio-mixing">Tutorial: Audio Mixing</h2>
+<p>Also see <a href="https://youtu.be/HXMYDbuLwVI?t=1516">this video</a> about audio mixing.</p>
+<p>Dissonance does not have any special support built in for audio mixing, because unity already has a powerful mixing system built in which dissonance audio is routed through. You can find out more about the unity audio mixing system <a href="http://blogs.unity3d.com/2014/07/24/mixing-sweet-beats-in-unity-5-0/">here</a>. This tutorial offers advice about the best way to use the unity audio pipeline for VoIP.</p>
+<h3 id="general-principles">General Principles</h3>
+<p>It can be tempting to mix voice signals in the same way as any other audio signal in your game and to add various sound effects to the voice for realism/immersion. Things such as drowning out teammates with loud gunfire, deafening players when they're hit by a flashbang or adding extreme radio fuzz when the enemy team use jammers might all sound immersive but in reality will just force people not to use the in game VoIP. Any audio mixing done to the voice signal should be done to improve the voice the voice quality.</p>
+<h2 id="volume-ducking">Volume Ducking</h2>
+<p>Games frequently have very loud sound effects such as explosions and gunfire which can drown out other sounds in the game. However, it would interrupt conversations if these noises also drowned out the voice signal. A naive solution would be to increase the volume of the voice signal far above the game sounds but doing this would cause clipping and sound terrible. An alternative solution would be to reduce the volume of the game audio far below the voice signal, but doing this would cause the game sounds to lack impact even when no one is talking. The best solution is to play game sounds at full volume when no one is talking but then when someone starts talking simply "duck" the volume so the voice can be clearly heard over the game sounds.</p>
+<p><img alt="Example of audio mixer with ducking" src="../images/AudioMixing_Ducking.png" title="Example of audio mixer with ducking" /></p>
+<p>Above is an example audio mixer for a game. Highlighted in red are all the groups of non voice data, highlighted in blue is a groups of NPC voice audio and highlighted in green is a groups of human voice data. If you do not have any groups like this then all you need to add is a single groups of "non-voice" and make sure all the game sounds play to this group. To make dissonance play to the "Human Voice" group you need to modify your playback prefab, simply drag the "Human Voice" group into the AudioSource of the prefab and all voice will play to that group.</p>
+<p>The yellow arrows indicate "sends", a send sends audio from one signal processor to another. At the receiving end of the sends is a "Duck Volume" effect, this reduces the volume of the group relative to the volume of the signal it receives via a send. The setup shown above has <em>two</em> volume ducks and <em>three</em> sends. The human voice sends to "Non-Voice" and "NPC Voice", this means than when a human speaks both NPC voices and other sounds get quieter. The "NPC Voice" has a single send to the "Non-Voice" group, this means that when an NPC speaks other sounds get quieter.</p>
+<h2 id="sound-effects">Sound Effects</h2>
+<p>As mentioned above you should be very cautious about applying any sound effects to the voice signal which are not for the purpose of enhancing the voice quality. However there are some situations where applying sound effects to voices could sound good, for example keeping allied communications clean, but adding a subtle radio distortion effect to enemy communications. Applying an effect is very simple, simply click add on the audio group and select the effect you want.</p>
+<p><img alt="Example of audio mixer with distortion" src="../images/AudioMixing_Distortion.png" title="Example of audio mixer with distortion" /></p>
+<p>Above is an example of an audio group with a <a href="https://docs.unity3d.com/Manual/class-AudioDistortionEffect.html">distortion</a> effect applied.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Access-Control-Tokens.html" class="btn btn-neutral float-right" title="Access Tokens">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="Player-State.html" class="btn btn-neutral" title="Finding Players"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a href='https://placeholder-software.co.uk/dissonance/'>Placeholder Software</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="Player-State.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="Access-Control-Tokens.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

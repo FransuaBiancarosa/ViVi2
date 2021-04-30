@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../dissonance.png">
+  
+  <meta name="google-site-verification" content="PcruPlNwdq73WM-Jvo9loUQQzOlcyjaYAmgNJu16nlY" />
+
+  <title>Network Protocol - Dissonance: Unity Voice Chat</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link href="../../css/pygment_tweaks.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Network Protocol";
+    var mkdocs_page_input_path = "Reference\\Networking\\Network-Protocol.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46722926-2', 'dissonance.readthedocs.io');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="icon icon-home"> Dissonance: Unity Voice Chat</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Project Setup</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Basics/Getting-Started.html">Getting Started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Choosing-A-Network.html">Network Integrations</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation Requirements</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Basics/Licensing.html">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Windows Desktop.html">Windows (Desktop)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Windows UWP & Hololens.html">Windows (UWP/Hololens)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Linux.html">Linux</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/MacOS.html">MacOS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Android & Oculus Go.html">Android (Including Oculus Go)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/iOS.html">iOS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Magic Leap.html">Magic Leap</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Quick Start Guides</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Forge-Remastered.html">Forge Networking Remastered</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-DR2.html">Dark Rift 2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Photon.html">Photon Unity Networking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Photon-Bolt.html">Photon BOLT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-UNet-HLAPI.html">Unity Networking HLAPI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Mirror.html">Mirror Networking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Steamworks.Net-P2P.html">Steamworks.NET P2P</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-UNet-LLAPI.html">Unity Networking LLAPI (self contained)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-PureP2P.html">WebRTC Network (self contained)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Basics/Introduction-To-Chat-Rooms.html">Basic Concepts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Introductory Tutorials</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Push-to-Talk.html">Push-To-Talk</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Global-Chat-Room.html">Global Chat Room</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Team-Chat-Rooms.html">Team Chat Rooms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Text-Chat.html">Text Chat</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Direct-Player-Transmit.html">Transmit to Player</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Position-Tracking.html">Position Tracking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Position-Tracking-For-Bolt.html">Position Tracking For BOLT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Proximity-Chat.html">Proximity Chat</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Collider-Chat-Room.html">Collider Chat Rooms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Player-State.html">Finding Players</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Audio-Mixing.html">Audio Mixing For Voice</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Access-Control-Tokens.html">Access Tokens</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Channel-Priority.html">Channel Priority</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Channel-Volume.html">Channel Volume</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Playback-Prefab.html">Custom Playback Prefab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Script-Controlled-Speech.html">Script Controlled Speech</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Spatializer-Plugin.html">Spatialization Plugins</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Advanced Tutorials</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Custom-Networking.html">Writing A Custom Network Integration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Custom-Position-Tracking.html">Writing A Custom IDissonancePlayer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Custom-Microphone-Capture.html">Writing A Custom Microphone Capture System</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Directly-Using-Channels.html">Using Channels</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Acoustic-Echo-Cancellation.html">Acoustic Echo Cancellation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Assembly-Definitions.html">Assembly Definitions</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Reference</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Components</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Components/Voice-Broadcast-Trigger.html">Voice Broadcast Trigger</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Components/Voice-Receipt-Trigger.html">Voice Receipt Trigger</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Components/Dissonance-Comms.html">Dissonance Comms</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Audio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Audio/VoiceSettings.html">Voice Settings</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Networking</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="Network-Protocol.html">Network Protocol</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#network-format">Network Format</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#terminology">Terminology</a></li>
+        
+            <li><a class="toctree-l5" href="#packet-header">Packet Header</a></li>
+        
+            <li><a class="toctree-l5" href="#kicking-from-a-session">Kicking From A Session</a></li>
+        
+            <li><a class="toctree-l5" href="#joining-a-session">Joining A Session</a></li>
+        
+            <li><a class="toctree-l5" href="#joining-or-leaving-a-room">Joining Or Leaving A Room</a></li>
+        
+            <li><a class="toctree-l5" href="#replicating-data">Replicating Data</a></li>
+        
+            <li><a class="toctree-l5" href="#peer-to-peer">Peer To Peer</a></li>
+        
+            <li><a class="toctree-l5" href="#voice-packets">Voice Packets</a></li>
+        
+            <li><a class="toctree-l5" href="#relayed-packets">Relayed Packets</a></li>
+        
+            <li><a class="toctree-l5" href="#text-packets">Text Packets</a></li>
+        
+            <li><a class="toctree-l5" href="#leaving-a-session">Leaving A Session</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Other</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/Rooms.html">Rooms</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/RoomChannels.html">RoomChannels</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/RoomChannel.html">RoomChannel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/PlayerChannels.html">PlayerChannels</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/PlayerChannel.html">PlayerChannel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/TextChat.html">TextChat</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/VoicePlayerState.html">VoicePlayerState</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/RemoteChannel.html">RemoteChannel</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Dissonance: Unity Voice Chat</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Networking &raquo;</li>
+        
+      
+        
+          <li>Reference &raquo;</li>
+        
+      
+    
+    <li>Network Protocol</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Placeholder-Software/Dissonance/edit/master/docs/Reference/Networking/Network-Protocol.md"> Edit on Issue Tracker</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="network-format">Network Format</h1>
+<p>The Dissonance network system manages three main bits of data:</p>
+<ul>
+<li>Who is in the session</li>
+<li>Who is listening to which rooms</li>
+<li>Voice packets</li>
+</ul>
+<p>This document will give you an overview of how the Dissonance network system manages this data. To see the exact packet format look at <code>PacketWriter.cs</code> and <code>PacketReader.cs</code> in the Dissonance package, these structs have a method for writing/reading each different packet type.</p>
+<p><strong>Knowledge of the network format is not necessary to work with Dissonance in most cases</strong>. This documentation is only required if you want to interact with Dissonance over the network from your own non-Unity code. For example writing a Dissonance server in another language to host separately from Unity.</p>
+<h2 id="terminology">Terminology</h2>
+<h4 id="peer">Peer</h4>
+<p>Every different machine in the session is a peer. This include both the server and the client.</p>
+<h4 id="client">Client</h4>
+<p>A client is a peer which is recording and playing voice.</p>
+<h4 id="server">Server</h4>
+<p>The server is peer in the session which manages the organisation of the session, e.g. assigning unique ID numbers to peers when they join. All non-voice packets are sent to the server.</p>
+<p>The server can be running in 2 modes. A <strong>host</strong> is a peer which is both a client and a server. A <strong>dedicated server</strong> is a pure server (i.e. no audio capture or playback).</p>
+<h4 id="reliable">Reliable</h4>
+<p>Some packets are sent <em>reliably</em>. This means that the packets will arrive at their destination in the order they were sent, there are no lost packets. This is used for all non-voice packets.</p>
+<h4 id="unreliable">Unreliable</h4>
+<p>Some packets are sent <em>unreliably</em>. This means that the packets may be lost in transport or arrive in a different order. This is always used for voice packets.</p>
+<h4 id="frame">Frame</h4>
+<p>Audio is recorded, processed and played back in <em>frames</em>, this is a buffer of 10-40ms of audio. Every frame is packed into a single network packet.</p>
+<h4 id="room">Room</h4>
+<p>A room is a type of channel which requires the listener to explicitly subscribe to the room to hear any audio sent to that room. Rooms have a name (a string) but on the network rooms are generally referred to by a 16 bit ID which is calculated by the <code>ToRoomId(string name)</code> method.</p>
+<h2 id="packet-header">Packet Header</h2>
+<p>All packets contain a header which is used to check that the packet is valid.</p>
+<p>The first 16 bits of every Dissonance packet are a 16 bit <em>magic number</em> <code>0x8bc7</code>. This is read from the start of the packet and if it's incorrect the packet is immediately discarded. If something goes wrong and non-Dissonance packets are sent to Dissonance this prevents them from being decoded.</p>
+<p>The next 8 bytes are the packet type, this tells Dissonance how the contents of the packet should be decoded. The values used for this are defined in <code>MessageTypes.cs</code>.</p>
+<p>After that all packets (except <code>HandshakeRequest</code>) have the 32 bit session number, this is a unique number randomly generated by the server when it starts a new session. If the session number does not match the packet is immediately discarded. If something goes wrong and packets from one Dissonance session are sent to another Dissonance session this prevents them from being decoded.</p>
+<h2 id="kicking-from-a-session">Kicking From A Session</h2>
+<p>If a packet with an incorrect session number is received by the server it will send back an <code>ErrorWrongSession</code> packet to the client which contains the session number being used by the server. If the client is not using this session number it will disconnect and reconnect to the server.</p>
+<h2 id="joining-a-session">Joining A Session</h2>
+<ol>
+<li>A new client sends a <code>HandshakeRequest</code> message to the server. This tells the server the codec settings in use by this client as well as it's name.</li>
+<li>The server replies with a <code>HandshakeResponse</code> message. This sends the complete state of the server to the client:</li>
+</ol>
+<ul>
+<li>the session ID. A unique value prepended to all packets.</li>
+<li>The client ID. A unique 16 bit ID for this client.</li>
+<li>Client list. A list of all other clients in the session (name, codec setting, unique ID).  </li>
+<li>Room list. A list of the room names which at least one client is currently listening to.</li>
+<li>Listeners list. A list of clients and the rooms which they are currently listening to.</li>
+</ul>
+<ol start="3">
+<li>The client replies with a <code>ClientState</code> message. This tells the server the complete state of the client:</li>
+</ol>
+<ul>
+<li>Name</li>
+<li>Client ID</li>
+<li>Codec Settings</li>
+<li>Rooms list. A list of the rooms this client is currently listening to.</li>
+</ul>
+<h2 id="joining-or-leaving-a-room">Joining Or Leaving A Room</h2>
+<p>The server maintains a list of which rooms every client is currently listening to. Sending a complete <code>ClientState</code> message every time a client join or leaves a room would be wasteful, instead a <code>DeltaClientState</code> message is sent. This contains:</p>
+<ul>
+<li>Flag indicating <code>joining</code> or <code>leaving</code></li>
+<li>Client ID</li>
+<li>Room name</li>
+</ul>
+<h2 id="replicating-data">Replicating Data</h2>
+<p>The update messages <code>ClientState</code> and <code>DeltaClientState</code> are sent from clients to the server, which updates it's internal state. The server also broadcasts these messages out to all clients which update their own state. This means that every client has exactly the same list of who is listening to which rooms.</p>
+<h2 id="peer-to-peer">Peer To Peer</h2>
+<p>It's possible for peers to communicate directly. When this is setup the metadata messages are still sent to the server but voice packets are sent directly from one client to another.</p>
+<p>To set this up a client sends a <code>HandshakeP2P</code> message to every peer which it knows how to directly contact. The <code>HandshakeP2P</code> message contains the ID of the sending client. When a client receives a <code>HandshakeP2P</code> message from another client it can take note of the connection which that message came through, send back a <code>HandshakeP2P</code> message in response over that connection, and now the two peers can communicate directly.</p>
+<h2 id="voice-packets">Voice Packets</h2>
+<p>Each client records audio, preprocesses it to improve audio quality, encodes it (using opus) and then sends the packet. The client decides who to send the packet to based on it's knowledge of who is listening to what. The client sends the voice packet via P2P to as many client as possible. The remaining packets are relayed via the server.</p>
+<p>The <code>VoiceData</code> packet contains:</p>
+<ul>
+<li>Sender Client ID</li>
+<li>8 bit bitfield of packet flags. Currently 2 bits are used for the "channel session" and the other bits are unused.</li>
+<li>Sequence number. A number which can be used to put packets into the correct order.</li>
+<li>A list of channels which this voice is addressed to. For each channel:</li>
+<li>16 bit channel bitfield</li>
+<li>16 Bit channel ID</li>
+<li>A frame of encoded audio</li>
+</ul>
+<h2 id="relayed-packets">Relayed Packets</h2>
+<p>When packets cannot be sent directly with P2P they can be relayed via the server. The <code>ServerRelayReliable</code> and <code>ServerRelayUnreliable</code> packets are used for this purpose. These packets contain a list of destination client IDs and then an array of bytes.</p>
+<p>When the server receives one of these packets it sends the array of bytes out to all of the listed clients. The server will discard attempts to relay <code>HandshakeP2P</code> packets.</p>
+<h2 id="text-packets">Text Packets</h2>
+<p>Text packets can be sent through the Dissonance session, unlike voice they are always relayed via the server. The <code>TextData</code> packet contains:</p>
+<ul>
+<li>Recipient type. This indicates if the packet is targeted at a player or a room.</li>
+<li>Sender ID. Client ID of the sender.</li>
+<li>Recipient ID. This is either a room ID or a client ID, depending upon the recipient type.</li>
+<li>A string of UTF8 encoded text.</li>
+</ul>
+<h2 id="leaving-a-session">Leaving A Session</h2>
+<p>When a client leaves the session the server sends a <code>RemoveClient</code> message out to all clients. This simply contains the ID of the client which is leaving the session.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Other/Rooms.html" class="btn btn-neutral float-right" title="Rooms">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Audio/VoiceSettings.html" class="btn btn-neutral" title="Voice Settings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a href='https://placeholder-software.co.uk/dissonance/'>Placeholder Software</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Audio/VoiceSettings.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Other/Rooms.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

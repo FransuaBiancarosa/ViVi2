@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../dissonance.png">
+  
+  <meta name="google-site-verification" content="PcruPlNwdq73WM-Jvo9loUQQzOlcyjaYAmgNJu16nlY" />
+
+  <title>Writing A Custom Microphone Capture System - Dissonance: Unity Voice Chat</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link href="../css/pygment_tweaks.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Writing A Custom Microphone Capture System";
+    var mkdocs_page_input_path = "Tutorials\\Custom-Microphone-Capture.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46722926-2', 'dissonance.readthedocs.io');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Dissonance: Unity Voice Chat</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Project Setup</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Basics/Getting-Started.html">Getting Started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Choosing-A-Network.html">Network Integrations</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation Requirements</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Basics/Licensing.html">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Windows Desktop.html">Windows (Desktop)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Windows UWP & Hololens.html">Windows (UWP/Hololens)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Linux.html">Linux</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/MacOS.html">MacOS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Android & Oculus Go.html">Android (Including Oculus Go)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/iOS.html">iOS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Platforms/Magic Leap.html">Magic Leap</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Quick Start Guides</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Forge-Remastered.html">Forge Networking Remastered</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-DR2.html">Dark Rift 2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Photon.html">Photon Unity Networking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Photon-Bolt.html">Photon BOLT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-UNet-HLAPI.html">Unity Networking HLAPI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Mirror.html">Mirror Networking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-Steamworks.Net-P2P.html">Steamworks.NET P2P</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-UNet-LLAPI.html">Unity Networking LLAPI (self contained)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Basics/Quick-Start-PureP2P.html">WebRTC Network (self contained)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Basics/Introduction-To-Chat-Rooms.html">Basic Concepts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Introductory Tutorials</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="Push-to-Talk.html">Push-To-Talk</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Global-Chat-Room.html">Global Chat Room</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Team-Chat-Rooms.html">Team Chat Rooms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Text-Chat.html">Text Chat</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Direct-Player-Transmit.html">Transmit to Player</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Position-Tracking.html">Position Tracking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Position-Tracking-For-Bolt.html">Position Tracking For BOLT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Proximity-Chat.html">Proximity Chat</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Collider-Chat-Room.html">Collider Chat Rooms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Player-State.html">Finding Players</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Audio-Mixing.html">Audio Mixing For Voice</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Access-Control-Tokens.html">Access Tokens</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Channel-Priority.html">Channel Priority</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Channel-Volume.html">Channel Volume</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Playback-Prefab.html">Custom Playback Prefab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Script-Controlled-Speech.html">Script Controlled Speech</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Spatializer-Plugin.html">Spatialization Plugins</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Advanced Tutorials</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="Custom-Networking.html">Writing A Custom Network Integration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Custom-Position-Tracking.html">Writing A Custom IDissonancePlayer</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="Custom-Microphone-Capture.html">Writing A Custom Microphone Capture System</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#tutorial-custom-microphone-capture">Tutorial: Custom Microphone Capture</a></li>
+    
+
+    <li class="toctree-l3"><a href="#default-microphone-capture">Default Microphone Capture</a></li>
+    
+
+    <li class="toctree-l3"><a href="#imicrophonecapture">IMicrophoneCapture</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#bool-isrecording-get">bool IsRecording { get; }</a></li>
+        
+            <li><a class="toctree-l4" href="#timespan-latency-get">TimeSpan Latency { get; }</a></li>
+        
+            <li><a class="toctree-l4" href="#waveformat-startcapturestring-mic_name">WaveFormat StartCapture(string mic_name)</a></li>
+        
+            <li><a class="toctree-l4" href="#stopcapture">StopCapture()</a></li>
+        
+            <li><a class="toctree-l4" href="#subscribeimicrophonesubscriber-subscriber">Subscribe(IMicrophoneSubscriber subscriber)</a></li>
+        
+            <li><a class="toctree-l4" href="#bool-unsubscribeimicrophonesubscriber-subscriber">bool Unsubscribe(IMicrophoneSubscriber subscriber)</a></li>
+        
+            <li><a class="toctree-l4" href="#bool-update">bool Update()</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Directly-Using-Channels.html">Using Channels</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Acoustic-Echo-Cancellation.html">Acoustic Echo Cancellation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Assembly-Definitions.html">Assembly Definitions</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Reference</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Components</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Components/Voice-Broadcast-Trigger.html">Voice Broadcast Trigger</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Components/Voice-Receipt-Trigger.html">Voice Receipt Trigger</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Components/Dissonance-Comms.html">Dissonance Comms</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Audio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Audio/VoiceSettings.html">Voice Settings</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Networking</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Networking/Network-Protocol.html">Network Protocol</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Other</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/Rooms.html">Rooms</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/RoomChannels.html">RoomChannels</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/RoomChannel.html">RoomChannel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/PlayerChannels.html">PlayerChannels</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/PlayerChannel.html">PlayerChannel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/TextChat.html">TextChat</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/VoicePlayerState.html">VoicePlayerState</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Reference/Other/RemoteChannel.html">RemoteChannel</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Dissonance: Unity Voice Chat</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Advanced Tutorials &raquo;</li>
+        
+      
+    
+    <li>Writing A Custom Microphone Capture System</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Placeholder-Software/Dissonance/edit/master/docs/Tutorials/Custom-Microphone-Capture.md"> Edit on Issue Tracker</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="tutorial-custom-microphone-capture">Tutorial: Custom Microphone Capture</h2>
+<p>This tutorial will explain how to replace the microphone capture system in Dissonance with your own script. By doing this you will gain complete control over what audio is input to Dissonance.</p>
+<h2 id="default-microphone-capture">Default Microphone Capture</h2>
+<p>When the DissonanceComms component <code>Start</code> method is called (just once when the component is first enabled) Dissonance will look for a sibling component which implements the <code>IMicrophoneCapture</code> interface. If it does not find a suitable component it will create a <code>BasicMicrophoneCapture</code> component which internally uses the Unity <a href="https://docs.unity3d.com/ScriptReference/Microphone.html">microphone API</a>. To use your custom microphone script simply drop it onto the same gameObject as DissonanceComms.</p>
+<h2 id="imicrophonecapture">IMicrophoneCapture</h2>
+<h3 id="bool-isrecording-get">bool IsRecording { get; }</h3>
+<p>This property indicates if the microphone component is currently recording.</p>
+<h3 id="timespan-latency-get">TimeSpan Latency { get; }</h3>
+<p>This property should give the estimated latency of the microphone capture system. This is the total time from audio physically hitting the microphone hardware to the data being passed on to subscribers.</p>
+<h3 id="waveformat-startcapturestring-mic_name">WaveFormat StartCapture(string mic_name)</h3>
+<p>Attempt to begin recording. The return value indicates what format the captured data will be. If microphone capture cannot be started for any reason this method should return null.</p>
+<p>The microphone name is passed through from the UI, how it is interpreted depends upon what kind of audio capture system you are using.</p>
+<h3 id="stopcapture">StopCapture()</h3>
+<p>Immediately stops microphone capture, discarding any data remaining in internal buffers.</p>
+<h3 id="subscribeimicrophonesubscriber-subscriber">Subscribe(IMicrophoneSubscriber subscriber)</h3>
+<p>Subscribes a new object to receive raw microphone data.</p>
+<h3 id="bool-unsubscribeimicrophonesubscriber-subscriber">bool Unsubscribe(IMicrophoneSubscriber subscriber)</h3>
+<p>Attempts to remove a previously subscribed object. Returns whether the object was found (if it was found it is assumed it was successfully removed). </p>
+<h3 id="bool-update">bool Update()</h3>
+<p>Pass buffered data on to the subscribers.</p>
+<p>Returns true if the microphone needs to be reset. In this case Stop will immediately be called (and start may be called afterwards).</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Directly-Using-Channels.html" class="btn btn-neutral float-right" title="Using Channels">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="Custom-Position-Tracking.html" class="btn btn-neutral" title="Writing A Custom IDissonancePlayer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a href='https://placeholder-software.co.uk/dissonance/'>Placeholder Software</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="Custom-Position-Tracking.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="Directly-Using-Channels.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

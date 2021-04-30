@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../dissonance.png">
+  
+  <meta name="google-site-verification" content="PcruPlNwdq73WM-Jvo9loUQQzOlcyjaYAmgNJu16nlY" />
+
+  <title>Voice Broadcast Trigger - Dissonance: Unity Voice Chat</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link href="../../css/pygment_tweaks.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Voice Broadcast Trigger";
+    var mkdocs_page_input_path = "Reference\\Components\\Voice-Broadcast-Trigger.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46722926-2', 'dissonance.readthedocs.io');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="icon icon-home"> Dissonance: Unity Voice Chat</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Project Setup</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Basics/Getting-Started.html">Getting Started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Choosing-A-Network.html">Network Integrations</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation Requirements</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Basics/Licensing.html">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Windows Desktop.html">Windows (Desktop)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Windows UWP & Hololens.html">Windows (UWP/Hololens)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Linux.html">Linux</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/MacOS.html">MacOS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Android & Oculus Go.html">Android (Including Oculus Go)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/iOS.html">iOS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Platforms/Magic Leap.html">Magic Leap</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Quick Start Guides</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Forge-Remastered.html">Forge Networking Remastered</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-DR2.html">Dark Rift 2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Photon.html">Photon Unity Networking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Photon-Bolt.html">Photon BOLT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-UNet-HLAPI.html">Unity Networking HLAPI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Mirror.html">Mirror Networking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-Steamworks.Net-P2P.html">Steamworks.NET P2P</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-UNet-LLAPI.html">Unity Networking LLAPI (self contained)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Basics/Quick-Start-PureP2P.html">WebRTC Network (self contained)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Basics/Introduction-To-Chat-Rooms.html">Basic Concepts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Introductory Tutorials</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Push-to-Talk.html">Push-To-Talk</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Global-Chat-Room.html">Global Chat Room</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Team-Chat-Rooms.html">Team Chat Rooms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Text-Chat.html">Text Chat</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Direct-Player-Transmit.html">Transmit to Player</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Position-Tracking.html">Position Tracking</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Position-Tracking-For-Bolt.html">Position Tracking For BOLT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Proximity-Chat.html">Proximity Chat</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Collider-Chat-Room.html">Collider Chat Rooms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Player-State.html">Finding Players</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Audio-Mixing.html">Audio Mixing For Voice</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Access-Control-Tokens.html">Access Tokens</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Channel-Priority.html">Channel Priority</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Channel-Volume.html">Channel Volume</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Playback-Prefab.html">Custom Playback Prefab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Script-Controlled-Speech.html">Script Controlled Speech</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Spatializer-Plugin.html">Spatialization Plugins</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Advanced Tutorials</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Custom-Networking.html">Writing A Custom Network Integration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Custom-Position-Tracking.html">Writing A Custom IDissonancePlayer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Custom-Microphone-Capture.html">Writing A Custom Microphone Capture System</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Directly-Using-Channels.html">Using Channels</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Acoustic-Echo-Cancellation.html">Acoustic Echo Cancellation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Tutorials/Assembly-Definitions.html">Assembly Definitions</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Reference</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <span class="caption-text">Components</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="Voice-Broadcast-Trigger.html">Voice Broadcast Trigger</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#voice-broadcast-trigger">Voice Broadcast Trigger</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#channel-type">Channel Type</a></li>
+        
+            <li><a class="toctree-l5" href="#channel-metadata">Channel Metadata</a></li>
+        
+            <li><a class="toctree-l5" href="#ismuted-bool">IsMuted : bool</a></li>
+        
+            <li><a class="toctree-l5" href="#activation-mode">Activation Mode</a></li>
+        
+            <li><a class="toctree-l5" href="#access-tokens">Access Tokens</a></li>
+        
+            <li><a class="toctree-l5" href="#amplitude-faders">Amplitude Faders</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Voice-Receipt-Trigger.html">Voice Receipt Trigger</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Dissonance-Comms.html">Dissonance Comms</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Audio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Audio/VoiceSettings.html">Voice Settings</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Networking</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Networking/Network-Protocol.html">Network Protocol</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Other</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/Rooms.html">Rooms</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/RoomChannels.html">RoomChannels</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/RoomChannel.html">RoomChannel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/PlayerChannels.html">PlayerChannels</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/PlayerChannel.html">PlayerChannel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/TextChat.html">TextChat</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/VoicePlayerState.html">VoicePlayerState</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Other/RemoteChannel.html">RemoteChannel</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Dissonance: Unity Voice Chat</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Components &raquo;</li>
+        
+      
+        
+          <li>Reference &raquo;</li>
+        
+      
+    
+    <li>Voice Broadcast Trigger</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Placeholder-Software/Dissonance/edit/master/docs/Reference/Components/Voice-Broadcast-Trigger.md"> Edit on Issue Tracker</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="voice-broadcast-trigger">Voice Broadcast Trigger</h1>
+<p>The Voice Broadcast Trigger controls when and where the local voice data is sent to.</p>
+<p><img alt="Voice Broadcast Trigger Inspector" src="../../images/VoiceBroadcastTrigger_SectionsOverview.png" title="Voice Broadcast Trigger Inspector" /></p>
+<h2 id="channel-type">Channel Type</h2>
+<p>This section controls which channel voice data will be sent to with this trigger. There are three channel type options, which one you choose will change the rest of the channel type UI to match. Channel type can be set from scripts by modifying the <code>ChannelType</code> property.</p>
+<p><img alt="Voice Broadcast Trigger - Channel Type" src="../../images/VoiceBroadcastTrigger_Section_ChannelType.png" /></p>
+<h4 id="channel-type-room">Channel Type : Room</h4>
+<p>When using the "Room" channel type broadcaster sends voice to the specified room (a single room may have multiple speakers and multiple listeners). Available rooms are listed in a dropdown box and new rooms may be added by clicking the "Config Rooms" button. The target room name can be set from scripts by modifying the <code>RoomName</code> property.</p>
+<h4 id="channel-type-player">Channel Type : Player</h4>
+<p>When set to "Player" the broadcaster sends voice directly to the specified player. The inspector will show a text box to enter the name of the player to send to. The target player name can be configured from a script by modifying the <code>PlayerId</code> field.</p>
+<p>To get the names of other players inspect the Dissonance Comms component at runtime - when in a session it will show a list of all players in the session. To get the name of players by script enumerate the <code>DissonanceComms:Players</code> property.</p>
+<h4 id="channel-type-self">Channel Type : Self</h4>
+<p>If you have set up <a href="../../Tutorials/Position-Tracking.html">Position Tracking</a> then your player object will have an <code>IDissonancePlayer</code> component which identifies it to Dissonance. You can take advantage of this to send directly to players without having to know their name. When set to "Self" the broadcast component will look for an <code>IDissonancePlayer</code> component in this gameobject or any ancestor and will send directly to that player.</p>
+<h2 id="channel-metadata">Channel Metadata</h2>
+<p>This section controls which metadata is sent along with the channel.</p>
+<p><img alt="Voice Broadcast Trigger - Channel Metadata" src="../../images/VoiceBroadcastTrigger_Section_ChannelMetadata.png" /></p>
+<h4 id="use-positional-data">Use Positional Data</h4>
+<p>This determines whether the playback of the data sent through this broadcaster should use 3D audio playback (i.e. voice will sound as if it is coming from a certain position in space). Positional audio requires some additional setup (but does not use <em>any</em> additional CPU or network bandwidth at all when enabled). See the <a href="../../Tutorials/Position-Tracking.html">Position Tracking</a> tutorial for information about how to set up your project for position tracking of player objects. This option can be set from a script by modifying the <code>BroadcastPosition</code> field.</p>
+<h4 id="priority">Priority</h4>
+<p>This determines the priority which this voice has for playback. Everyone who receives audio will compare the priority of all the audio streams they are receiving and will only play out the streams with the highest priority.</p>
+<p>"None" is a special value which indicates that this broadcast trigger is setting no particular priority - the default priority for this player will be used instead. The default priority is set on the DissonanceComms component with the <code>PlayerPriority</code> property (if you do not set it it will have the priority <code>Default</code>). The priority values have this order:</p>
+<ol>
+<li>Low</li>
+<li>Default</li>
+<li>Medium</li>
+<li>High</li>
+</ol>
+<h2 id="ismuted-bool">IsMuted : bool</h2>
+<p>When set to <code>true</code> this trigger will never activate.</p>
+<p>This can be used to create a UI push-to-talk activated broadcast trigger - set the <code>Activation Mode</code> to <code>Voice Activation</code> and toggle the <code>IsMuted</code> property with a button. When muted by the UI no voice will be sent, when unmuted the trigger will automatically transmit when speech is detected.</p>
+<h2 id="activation-mode">Activation Mode</h2>
+<p>This section controls how the broadcast trigger decides when to send voice. There are three activation options, which one you choose will change the rest of the activation mode UI to match. Activation mode can be set from scripts by modifying the <code>Mode</code> property.</p>
+<p><img alt="Voice Broadcast Trigger - Activation Mode" src="../../images/VoiceBroadcastTrigger_Section_ActivationMode.png" /></p>
+<h4 id="activation-mode-none">Activation Mode : None</h4>
+<p>When set to "None" the broadcaster will never broadcast any voice.</p>
+<h4 id="activationmode-voice-activation">ActivationMode : Voice Activation</h4>
+<p>When set to "Voice Activation" the broadcaster will automatically transmit when voice is detected in the microphone signal.</p>
+<h4 id="activationmode-push-to-talk">ActivationMode : Push To Talk</h4>
+<p>When set to "Push To Talk" the broadcaster will transmit when a given input axis is chosen. You must set the name of a Unity input axis and then configure it in the Unity input manager.</p>
+<h4 id="collider-volume-activation">Collider Volume Activation</h4>
+<p>Using collider volume activation requires <a href="../../Tutorials/Position-Tracking.html">Position Tracking</a> to be set up. When active the broadcast trigger will find a sibling physics trigger volume and will only send voice if the local player (as defined by the <code>IDissonancePlayer</code> component) is inside the volume.</p>
+<h2 id="access-tokens">Access Tokens</h2>
+<p>This section controls which <a href="../../Tutorials/Access-Control-Tokens.html">Access Tokens</a> are required to send with this broadcaster.</p>
+<p><img alt="Voice Broadcast Trigger - Access Tokens" src="../../images/VoiceBroadcastTrigger_Section_AccessTokens.png" /></p>
+<p>The DissonanceComms component keeps a set of tokens which the local player has. The broadcast trigger will only send voice if the player has one or more of the necessary tokens.</p>
+<h2 id="amplitude-faders">Amplitude Faders</h2>
+<p>This section controls the amplitude and soft fading of voice sent with this trigger.</p>
+<p>"PushToTalk Fade" (precise name depends upon which activation mode you have chosen) applies a soft fade in and out <em>every time</em> speech is started or stopped (e.g. every time the push to talk key is pressed or released). This setting should be used with care; applying any fade in is inadvisable as it will cut off the start of what is being said. This fader can be configured from scripts by accessing the <code>ActivationFader</code> property.</p>
+<p>"Volume Trigger Fade" (only available when volume trigger is in use) applies a soft fade every time the player enters or exits the volume. This fader can be configured from scripts by accessing the <code>ColliderTriggerFader</code> property.</p>
+<p>Since there are two faders this means the trigger will have two different volumes to use, they will be multiplied together and the result is used as the actual volume value.</p>
+<p><img alt="Voice Broadcast Trigger - Amplitude Faders" src="../../images/VoiceBroadcastTrigger_Section_AmplitudeFaders.png" /></p>
+<h4 id="channel-volume">Channel Volume</h4>
+<p>This controls the maximum volume of the fader. This should be used with care; raising the amplification above one will cause clipping, which severely reduces audio quality.</p>
+<h4 id="fade-in-time">Fade In Time</h4>
+<p>This controls how long it takes this fader to increase volume from 0 to the <code>Channel Volume</code> slider level.</p>
+<h4 id="fade-out-time">Fade Out Time</h4>
+<p>This controls how long it takes this fader to decrease volume from <code>Channel Volume</code> slider level to 0. Note that this means voice will continue to be transmitted for this long even after the user has stopped pressing the push to talk key.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Voice-Receipt-Trigger.html" class="btn btn-neutral float-right" title="Voice Receipt Trigger">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../Tutorials/Assembly-Definitions.html" class="btn btn-neutral" title="Assembly Definitions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a href='https://placeholder-software.co.uk/dissonance/'>Placeholder Software</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../Tutorials/Assembly-Definitions.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="Voice-Receipt-Trigger.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
