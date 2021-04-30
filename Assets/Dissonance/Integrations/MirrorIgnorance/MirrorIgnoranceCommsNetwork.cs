@@ -13,8 +13,8 @@ namespace Dissonance.Integrations.MirrorIgnorance
     public class MirrorIgnoranceCommsNetwork
         : BaseCommsNetwork<MirrorIgnoranceServer, MirrorIgnoranceClient, MirrorConn, Unit, Unit>
     {
-        internal const byte ReliableSequencedChannel = Channels.Reliable;
-        internal const byte UnreliableChannel = Channels.Unreliable;
+        internal const byte ReliableSequencedChannel = Channels.DefaultReliable;
+        internal const byte UnreliableChannel = Channels.DefaultUnreliable;
 
         private readonly ConcurrentPool<byte[]> _loopbackBuffers = new ConcurrentPool<byte[]>(8, () => new byte[1024]);
         private readonly List<ArraySegment<byte>> _loopbackQueue = new List<ArraySegment<byte>>();
