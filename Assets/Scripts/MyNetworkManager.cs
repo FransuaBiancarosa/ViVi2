@@ -165,7 +165,7 @@ public class MyNetworkManager : NetworkManager
     }
 
     public void SetPort(ushort port) {
-        ((TelepathyTransport)transport).port = port;
+        ((IgnoranceTransport.Ignorance)transport).port = port;
     }
 
     public void OnGUI()
