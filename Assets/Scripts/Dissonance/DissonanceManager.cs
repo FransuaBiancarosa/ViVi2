@@ -1,19 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Dissonance;
+﻿using Dissonance;
 using UnityEngine;
 
 public class DissonanceManager : MonoBehaviour
 {
     [SerializeField] private VoiceBroadcastTrigger broadcastTrigger;
-    // Start is called before the first frame update
+    [SerializeField] private MuteHost hostSilencer;
+    public static DissonanceManager manager;
+    public MuteHost Silencer {get;}
     void Start()
     {
         if(broadcastTrigger == null)
             broadcastTrigger = GameObject.FindObjectOfType<VoiceBroadcastTrigger>();
+        if(hostSilencer)
+            hostSilencer = GameObject.FindObjectOfType<MuteHost>();
+
         if(!GlobalSettings.IsHost) {
-            //broadcastTrigger.IsMuted = true;
             broadcastTrigger.enabled = false;
         }
+
+        manager = this;
     }
 }

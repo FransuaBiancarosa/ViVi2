@@ -803,6 +803,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DissonanceManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2773665586803851027, guid: 3821cb6a7b8d233429b0274f3c451839,
+        type: 3}
+      propertyPath: hostSilencer
+      value: 
+      objectReference: {fileID: 83608798}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3821cb6a7b8d233429b0274f3c451839, type: 3}
 --- !u!4 &83608795 stripped
@@ -811,6 +816,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 83608794}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &83608796 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2875558548747291366, guid: 3821cb6a7b8d233429b0274f3c451839,
+    type: 3}
+  m_PrefabInstance: {fileID: 83608794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb4dc319de88dc4cb76c47aafb46b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &83608797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2773665586803851021, guid: 3821cb6a7b8d233429b0274f3c451839,
+    type: 3}
+  m_PrefabInstance: {fileID: 83608794}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &83608798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83608797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5503bce58dafccb4cbd4d93db8a29b00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissonanceComms: {fileID: 83608796}
 --- !u!1001 &96355077
 PrefabInstance:
   m_ObjectHideFlags: 0
