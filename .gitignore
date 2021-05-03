@@ -51,3 +51,4 @@ sysinfo.txt
 *.unitypackage
 Assets/Plugins/GitHub.meta
 Assets/UMA.meta
+Assets/Plugins/RootMotion/FinalIK/_Integration.meta
