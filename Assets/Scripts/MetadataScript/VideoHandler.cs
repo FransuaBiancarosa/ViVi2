@@ -36,6 +36,12 @@ public class VideoHandler : MonoBehaviour
 
         StopVideo();
 
+        if (GlobalSettings.currentActiveMetadataHandler != null && GlobalSettings.currentActiveMetadataHandler != this.gameObject)
+        {
+            GlobalSettings.currentActiveMetadataHandler.SendMessage("Close");
+        }
+        GlobalSettings.currentActiveMetadataHandler = this.gameObject;
+
         videoPlayerCanvas.SetActive(true);
         videoPlayerCanvas.transform.position = spawnPosition;
 

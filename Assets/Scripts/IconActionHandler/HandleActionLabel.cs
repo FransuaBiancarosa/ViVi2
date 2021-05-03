@@ -186,7 +186,9 @@ public class HandleActionLabel : MonoBehaviour
     public void PlayStopAnimationAction()
     {
         Debug.Log("Animation Action");
-        
+        Debug.Log("Audio Action");
+        AnimationHandler.singleton.SetUpAnimationHandler(avaibleActions["animazione"].paths, gameObject.transform.position, objectToPlayAnimation);
+
     }
 
     public void AudioIconAction()

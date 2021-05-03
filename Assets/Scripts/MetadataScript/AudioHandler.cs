@@ -36,6 +36,12 @@ public class AudioHandler : MonoBehaviour
 
         StopAudio();
 
+        if (GlobalSettings.currentActiveMetadataHandler != null && GlobalSettings.currentActiveMetadataHandler!=this.gameObject)
+        {
+            GlobalSettings.currentActiveMetadataHandler.SendMessage("Close");
+        }
+        GlobalSettings.currentActiveMetadataHandler = this.gameObject;
+
         audioPlayerCanvas.SetActive(true);
         audioPlayerCanvas.transform.position = spawnPosition;
 

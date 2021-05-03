@@ -27,6 +27,13 @@ public class ImageHandler : MonoBehaviour
         if (imagePaths == null || imagePaths.Count == 0)
             return;
 
+        if (GlobalSettings.currentActiveMetadataHandler != null && GlobalSettings.currentActiveMetadataHandler != this.gameObject)
+        {
+            GlobalSettings.currentActiveMetadataHandler.SendMessage("Close");
+        }
+        GlobalSettings.currentActiveMetadataHandler = this.gameObject;
+
+
         imageCanvas.SetActive(true);
         imageCanvas.transform.position = spawnPosition;
 
