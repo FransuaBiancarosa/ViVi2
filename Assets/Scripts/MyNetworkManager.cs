@@ -165,7 +165,10 @@ public class MyNetworkManager : NetworkManager
     }
 
     public void SetPort(ushort port) {
-        ((IgnoranceTransport.Ignorance)transport).port = port;
+        if(transport is IgnoranceTransport.Ignorance)
+            (transport as IgnoranceTransport.Ignorance).port = port;
+        else if(transport is TelepathyTransport)
+            (transport as TelepathyTransport).port = port; 
     }
 
     public void OnGUI()
