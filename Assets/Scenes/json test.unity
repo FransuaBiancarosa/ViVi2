@@ -2545,6 +2545,7 @@ GameObject:
   - component: {fileID: 254703943}
   - component: {fileID: 254703945}
   - component: {fileID: 254703944}
+  - component: {fileID: 254703946}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -2616,6 +2617,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 46904875}
+--- !u!114 &254703946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254703941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f13e1ce2ba86d94b8c04d1a048199c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &254877575
 GameObject:
   m_ObjectHideFlags: 0
@@ -9521,7 +9534,7 @@ RectTransform:
   m_GameObject: {fileID: 1261723731}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_Children:
   - {fileID: 576517480}
   - {fileID: 468293827}
