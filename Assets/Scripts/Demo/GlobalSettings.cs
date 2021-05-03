@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
@@ -17,6 +18,8 @@ public static class GlobalSettings
     public static Vector3 PositionHost;
     public static Vector3 PositionClient;
     public static List<GameObject> Interactables;
+
+    public static GameObject currentActiveMetadataHandler;
 
     public static Vector3 FloatListToVector3(List<float> list)
     {

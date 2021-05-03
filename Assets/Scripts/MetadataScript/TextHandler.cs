@@ -27,6 +27,12 @@ public class TextHandler : MonoBehaviour
         if (textPaths == null || textPaths.Count == 0)
             return;
 
+        if (GlobalSettings.currentActiveMetadataHandler != null && GlobalSettings.currentActiveMetadataHandler != this.gameObject)
+        {
+            GlobalSettings.currentActiveMetadataHandler.SendMessage("Close");
+        }
+        GlobalSettings.currentActiveMetadataHandler = this.gameObject;
+
         textCanvas.SetActive(true);
         textCanvas.transform.position = spawnPosition;
 
@@ -50,6 +56,8 @@ public class TextHandler : MonoBehaviour
             textContainer.text = textAsset.text;
             textTitle.text = textPaths[0].path;
         }
+
+
 
     }
 
