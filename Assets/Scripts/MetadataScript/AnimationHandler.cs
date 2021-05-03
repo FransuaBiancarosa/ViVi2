@@ -69,7 +69,7 @@ public class AnimationHandler : MonoBehaviour
         if(objectToPlayAnimation.GetComponentInChildren<NetworkIdentity>()!=null && animationSyncer==null)
         {
             isNetwork = true;
-            animationSyncer = objectToPlayAnimation.AddComponent<AnimationSyncer>();
+            animationSyncer = objectToPlayAnimation.GetComponent<AnimationSyncer>();
 
             animationSyncer.play = false;
             animationSyncer.pause = false;
