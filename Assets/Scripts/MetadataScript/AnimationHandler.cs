@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking.Types;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
@@ -28,14 +30,29 @@ public class AnimationHandler : MonoBehaviour
 
     Animation anim;
     Coroutine currentWaitToEndCoroutine;
+
+    bool isNetwork;
+    AnimationSyncer animationSyncer;
+
+    int showIconMask;
+    int hideIconMask;
+
     private void Awake()
     {
         if (singleton == null)
             singleton = this;
+
+
+        hideIconMask = (Camera.main.cullingMask) & ~(1 << LayerMask.NameToLayer("AugmentedIcon"));
+
+        showIconMask = (Camera.main.cullingMask) | (1 << LayerMask.NameToLayer("AugmentedIcon"));
     }
     public void SetUpAnimationHandler(List<ActionInput> animationPaths, Vector3 spawnPosition, GameObject animableObject)
     {
         if (animationPaths == null || animationPaths.Count == 0)
+            return;
+
+        if (animableObject == null)
             return;
 
         StopAnimation();
@@ -48,6 +65,16 @@ public class AnimationHandler : MonoBehaviour
 
         objectToPlayAnimation = animableObject;
         anim = objectToPlayAnimation.GetComponentInChildren<Animation>();
+
+        if(objectToPlayAnimation.GetComponentInChildren<NetworkIdentity>()!=null && animationSyncer==null)
+        {
+            isNetwork = true;
+            animationSyncer = objectToPlayAnimation.AddComponent<AnimationSyncer>();
+
+            animationSyncer.play = false;
+            animationSyncer.pause = false;
+            animationSyncer.stop = false;
+        }
 
         animationPlayerCanvas.SetActive(true);
         animationPlayerCanvas.transform.position = spawnPosition;
@@ -71,6 +98,11 @@ public class AnimationHandler : MonoBehaviour
         if (animationAudio != null)
             animationAudio.clip = animationAudioClip;
 
+        if(animationSyncer!=null)
+        {
+            animationSyncer.animationName = animationPaths[0].path;
+        }
+
     }
 
     public void PlayAnimation()
@@ -86,7 +118,13 @@ public class AnimationHandler : MonoBehaviour
             anim.Play(animationPaths[currentAnimationId].path);
             if (animationAudio.clip != null)
                 animationAudio.Play();
-            currentWaitToEndCoroutine = StartCoroutine(WaitAnimationToEnd());           
+            currentWaitToEndCoroutine = StartCoroutine(WaitAnimationToEnd());
+            Camera.main.cullingMask = hideIconMask;
+
+            if (animationSyncer != null)
+            {
+                animationSyncer.play=true;
+            }
         }
         else
         {
@@ -95,10 +133,15 @@ public class AnimationHandler : MonoBehaviour
                 animationAudio.UnPause();
         }
 
-        
-
         playButton.SetActive(false);
         pauseButton.SetActive(true);
+
+        if (animationSyncer != null)
+        {
+            animationSyncer.play = true;
+            animationSyncer.pause = false;
+            animationSyncer.stop = false;
+        }
 
         isPaused = false;
     }
@@ -114,6 +157,14 @@ public class AnimationHandler : MonoBehaviour
 
         playButton.SetActive(true);
         pauseButton.SetActive(false);
+
+        if (animationSyncer != null)
+        {
+            animationSyncer.play = false;
+            animationSyncer.pause = true;
+            animationSyncer.stop = false;
+        }
+
         isPaused = true;
     }
 
@@ -130,9 +181,18 @@ public class AnimationHandler : MonoBehaviour
 
         anim.Stop();
         ResetModelAfterANimation();
+        Camera.main.cullingMask = showIconMask;
 
         playButton.SetActive(true);
         pauseButton.SetActive(false);
+
+        if (animationSyncer != null)
+        {
+            animationSyncer.play = false;
+            animationSyncer.pause = false;
+            animationSyncer.stop = true;
+        }
+
         isPaused = false;
     }
     
@@ -153,6 +213,14 @@ public class AnimationHandler : MonoBehaviour
         AudioClip animationAudioClip = Resources.Load<AudioClip>(Path.Combine("FileMultimediali", "AnimationAudio", objectToPlayAnimation.name.Replace("(Clone)", ""), animationPaths[currentAnimationId].path));
         if (animationAudio != null)
             animationAudio.clip = animationAudioClip;
+
+        if (animationSyncer != null)
+        {
+            animationSyncer.animationName = animationPaths[currentAnimationId].path;
+            animationSyncer.play = false;
+            animationSyncer.pause = false;
+            animationSyncer.stop = false;
+        }
     }
 
     public void PrevAnimation()
@@ -167,6 +235,14 @@ public class AnimationHandler : MonoBehaviour
         AudioClip animationAudioClip = Resources.Load<AudioClip>(Path.Combine("FileMultimediali","AnimationAudio", objectToPlayAnimation.name.Replace("(Clone)", ""), animationPaths[currentAnimationId].path));
         if (animationAudio != null)
             animationAudio.clip = animationAudioClip;
+
+        if (animationSyncer != null)
+        {
+            animationSyncer.animationName = animationPaths[currentAnimationId].path;
+            animationSyncer.play = false;
+            animationSyncer.pause = false;
+            animationSyncer.stop = false;
+        }
     }
 
     IEnumerator WaitAnimationToEnd()
@@ -181,8 +257,18 @@ public class AnimationHandler : MonoBehaviour
             animationAudio.Stop();
 
         animationTime.normalizedValue = 1;
+        Camera.main.cullingMask = showIconMask;
+
         playButton.SetActive(true);
         pauseButton.SetActive(false);
+
+        if (animationSyncer != null)
+        {         
+            animationSyncer.play = false;
+            animationSyncer.pause = false;
+            animationSyncer.stop = false;
+        }
+
         yield return null;
     }
 

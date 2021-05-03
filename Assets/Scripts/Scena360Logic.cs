@@ -123,12 +123,13 @@ public class Scena360Logic : MonoBehaviour
 
     void Instanciate3dAugmetedObject(OggettoAumentato oggettoAumentato)
     {
+
         GameObject oggettoAumentatoPrefab = Resources.Load<GameObject>(Path.Combine("AugmentedObject", "3D", oggettoAumentato.gobject));
         GameObject oggettoAumentatoInstanziato = Instantiate(oggettoAumentatoPrefab);
         oggettoAumentatoInstanziato.transform.position = GlobalSettings.FloatListToVector3(oggettoAumentato.posizione);
         oggettoAumentatoInstanziato.transform.rotation = Quaternion.Euler(GlobalSettings.FloatListToVector3(oggettoAumentato.rotazione));
         oggettoAumentatoInstanziato.transform.localScale = GlobalSettings.FloatListToVector3(oggettoAumentato.scala);
-        
+
 
         for(int i=0; i<oggettoAumentato.puntiDiInterazione.Count;i++)
         {
@@ -145,9 +146,10 @@ public class Scena360Logic : MonoBehaviour
             Debug.Log("setta azione punto interazione oggetto");
         }
 
-       
-        if(GlobalSettings.IsHost) 
+
+        if (GlobalSettings.IsHost && oggettoAumentato.network)
             NetworkServer.Spawn(oggettoAumentatoInstanziato);
+
         SceneManager.MoveGameObjectToScene(oggettoAumentatoInstanziato, this.gameObject.scene);
         //oggettoAumentatoInstanziato.transform.parent = transform;
     }

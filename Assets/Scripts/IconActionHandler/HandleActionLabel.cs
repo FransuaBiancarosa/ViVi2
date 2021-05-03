@@ -185,36 +185,26 @@ public class HandleActionLabel : MonoBehaviour
 
     public void PlayStopAnimationAction()
     {
-        Debug.Log("Animation Action");
-        Debug.Log("Audio Action");
         AnimationHandler.singleton.SetUpAnimationHandler(avaibleActions["animazione"].paths, gameObject.transform.position, objectToPlayAnimation);
-
     }
 
     public void AudioIconAction()
     {
-        Debug.Log("Audio Action");
         AudioHandler.singleton.SetUpAudioHandler(avaibleActions["audio"].paths, gameObject.transform.position);
-
     }
 
     public void VideoIconAction()
     {
-        Debug.Log("Video Action");
         VideoHandler.singleton.SetUpVideoHandler(avaibleActions["video"].paths, gameObject.transform.position);
     }
 
     public void ImageIconAction()
     {
-        Debug.Log("Image Action");
         ImageHandler.singleton.SetUpImageHandler(avaibleActions["immagine"].paths, gameObject.transform.position);
-
     }
     public void TextIconAction()
     {
-        Debug.Log("Text Action");
         TextHandler.singleton.SetUpTextHandler(avaibleActions["testo"].paths, gameObject.transform.position);
-
     }
 
     public void TeleportIconAction()
