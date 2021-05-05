@@ -76,8 +76,22 @@ public class AnimationHandler : MonoBehaviour
             animationSyncer.stop = false;
         }
 
+        GameObject tempPlayer = new GameObject();
+        tempPlayer.transform.position = Camera.main.transform.position;
+        Vector3 tempRotation = Camera.main.transform.rotation.eulerAngles;
+        tempRotation.x = 0;
+        tempRotation.z = 0;
+        tempPlayer.transform.rotation = Quaternion.Euler(tempRotation);
+
+
+        Vector3 spawnPos2 = Camera.main.transform.position + (tempPlayer.transform.forward * 1.5f);
+        spawnPos2.y = 0f;
+        spawnPos2.z = 4.5f;
+        animationPlayerCanvas.transform.position = spawnPos2;
+        Destroy(tempPlayer);
+
         animationPlayerCanvas.SetActive(true);
-        animationPlayerCanvas.transform.position = spawnPosition;
+        
 
         this.animationPaths = animationPaths;
         if (animationPaths.Count <= 1)
