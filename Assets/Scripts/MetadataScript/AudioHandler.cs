@@ -14,7 +14,8 @@ public class AudioHandler : MonoBehaviour
 
     public AudioSource audioPlayer;
     public Slider audioTime;
-    public TextMeshProUGUI audioTitle;
+    public Text audioTitle;
+   // public TextMeshProUGUI audioTitle;
     public GameObject playButton;
     public GameObject pauseButton;
     public GameObject nextButton;
@@ -42,8 +43,22 @@ public class AudioHandler : MonoBehaviour
         }
         GlobalSettings.currentActiveMetadataHandler = this.gameObject;
 
+        GameObject tempPlayer = new GameObject();
+        tempPlayer.transform.position = Camera.main.transform.position;
+        Vector3 tempRotation = Camera.main.transform.rotation.eulerAngles;
+        tempRotation.x = 0;
+        tempRotation.z = 0;
+        tempPlayer.transform.rotation = Quaternion.Euler(tempRotation);
+
+
+        Vector3 spawnPos2 = Camera.main.transform.position + (tempPlayer.transform.forward * 1.5f);
+        spawnPos2.y = 1.7f;
+        spawnPos2.z = 4.5f;
+        audioPlayerCanvas.transform.position = spawnPos2;
+        Destroy(tempPlayer);
+
         audioPlayerCanvas.SetActive(true);
-        audioPlayerCanvas.transform.position = spawnPosition;
+        
 
         this.audioPaths = audioPaths;
         if (audioPaths.Count <= 1)

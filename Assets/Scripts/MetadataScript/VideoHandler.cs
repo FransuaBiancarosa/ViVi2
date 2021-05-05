@@ -14,7 +14,8 @@ public class VideoHandler : MonoBehaviour
 
     public VideoPlayer videoPlayer;
     public Slider videoTime;
-    public TextMeshProUGUI videoTitle;
+    public Text videoTitle;
+   // public TextMeshProUGUI videoTitle;
     public GameObject playButton;
     public GameObject pauseButton;
     public GameObject nextVideoButton;
@@ -52,8 +53,8 @@ public class VideoHandler : MonoBehaviour
 
       
         Vector3 spawnPos2 = Camera.main.transform.position + (tempPlayer.transform.forward * 1.5f);
-        spawnPos2.y = 1.5f;
-        spawnPos2.z = 4f;
+        spawnPos2.y = 1.7f;
+        spawnPos2.z = 4.5f;
         videoPlayerCanvas.transform.position = spawnPos2;
         Destroy(tempPlayer);
 
