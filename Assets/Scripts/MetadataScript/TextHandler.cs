@@ -10,8 +10,10 @@ public class TextHandler : MonoBehaviour
     public static TextHandler singleton;
     public GameObject textCanvas;
 
-    public TextMeshProUGUI textContainer;
-    public TextMeshProUGUI textTitle;
+    //public TextMeshProUGUI textContainer;
+    //public TextMeshProUGUI textTitle;
+    public Text textContainer;
+    public Text textTitle;
     public GameObject nextButton;
     public GameObject prevButton;
 
@@ -33,8 +35,22 @@ public class TextHandler : MonoBehaviour
         }
         GlobalSettings.currentActiveMetadataHandler = this.gameObject;
 
+        GameObject tempPlayer = new GameObject();
+        tempPlayer.transform.position = Camera.main.transform.position;
+        Vector3 tempRotation = Camera.main.transform.rotation.eulerAngles;
+        tempRotation.x = 0;
+        tempRotation.z = 0;
+        tempPlayer.transform.rotation = Quaternion.Euler(tempRotation);
+
+
+        Vector3 spawnPos2 = Camera.main.transform.position + (tempPlayer.transform.forward * 1.5f);
+        spawnPos2.y = 1.7f;
+        spawnPos2.z = 4.5f;
+        textCanvas.transform.position = spawnPos2;
+        Destroy(tempPlayer);
+
         textCanvas.SetActive(true);
-        textCanvas.transform.position = spawnPosition;
+      
 
         this.textPaths = textPaths;
         if (textPaths.Count <= 1)
