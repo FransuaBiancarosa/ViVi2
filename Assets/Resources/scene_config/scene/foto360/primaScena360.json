@@ -71,7 +71,7 @@
             },
 			{
               "tipo": "teletrasporto",
-              "input": [{ "path": "0"}]
+              "input": [{ "path": "ScenaIniziale"}]
             }
           ],
           "owner": [1, 2]
@@ -92,12 +92,12 @@
           "scala": [1, 1, 1],
           "azioni": [
             {
-              "tipo": "animazione",
-              "input": [{ "path": "gira" }]
+              "tipo": "immagine",
+              "input": [{ "path": "immagine1"}]
             },
             {
-              "tipo": "link",
-              "input": [{ "path": "http://www.google.it" }]
+              "tipo": "testo",
+              "input": [{ "path": "testo1"}]
             }
           ],
           "owner": [1, 2]

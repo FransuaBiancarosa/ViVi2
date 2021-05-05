@@ -48,9 +48,14 @@ public class ScriptScenaIniziale : MonoBehaviour
         }
     }
 
+    //teletrasporto personalizzato per far vedere che la scena 3D fa cose particolari
     public void TeleportToScene()
     {
         //pulusci o resetta ciò che è necessario
-        SceneManagerScript.singleton.LoadScene("primaScena360");
+        WarningManager.singleton.SetUpWarning(Camera.main.transform.forward*4, "Desideri spostarti ?", "Se primi si andrai nella scena " + "primaScena360",
+          () => { SceneManagerScript.singleton.LoadScene("primaScena360"); },
+          () => { }
+          );
+        
     }
 }

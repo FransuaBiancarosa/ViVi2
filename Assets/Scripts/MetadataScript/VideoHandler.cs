@@ -42,8 +42,23 @@ public class VideoHandler : MonoBehaviour
         }
         GlobalSettings.currentActiveMetadataHandler = this.gameObject;
 
+
+        GameObject tempPlayer = new GameObject();
+        tempPlayer.transform.position = Camera.main.transform.position;
+        Vector3 tempRotation = Camera.main.transform.rotation.eulerAngles;
+        tempRotation.x = 0;
+        tempRotation.z = 0;
+        tempPlayer.transform.rotation =Quaternion.Euler(tempRotation);
+
+      
+        Vector3 spawnPos2 = Camera.main.transform.position + (tempPlayer.transform.forward * 1.5f);
+        spawnPos2.y = 1.5f;
+        spawnPos2.z = 4f;
+        videoPlayerCanvas.transform.position = spawnPos2;
+        Destroy(tempPlayer);
+
         videoPlayerCanvas.SetActive(true);
-        videoPlayerCanvas.transform.position = spawnPosition;
+       
 
         this.videoPaths = videoPaths;
         if(videoPaths.Count<=1)

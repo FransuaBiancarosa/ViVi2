@@ -141,9 +141,6 @@ public class Scena360Logic : MonoBehaviour
             instanciatedActionPoint.transform.rotation = Quaternion.Euler(GlobalSettings.FloatListToVector3(puntoDiInterazione.rotazione));
 
             instanciatedActionPoint.GetComponent<HandleActionLabel>().SetAction(puntoDiInterazione.azioni, oggettoAumentatoInstanziato);
-
-
-            Debug.Log("setta azione punto interazione oggetto");
         }
 
 

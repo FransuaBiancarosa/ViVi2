@@ -10,7 +10,13 @@ public class TeleportToSceneScript : MonoBehaviour
     public void TeleportToScene()
     {
         //pulusci o resetta ciò che è necessario
-        SceneManagerScript.singleton.LoadScene(teleportDestination);
+        CloseCurrentActiveActionPanel();
+        WarningManager.singleton.SetUpWarning(gameObject.transform.position, "Desideri spostarti ?", "Se primi si andrai nella scena "+ GlobalSettings.ElencoScene.scene[teleportDestination].json,
+           () => { SceneManagerScript.singleton.LoadScene(teleportDestination); },
+           () => { }
+           );
+
+        
     }
     public void SetOn()
     {
@@ -32,5 +38,14 @@ public class TeleportToSceneScript : MonoBehaviour
         {
             GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1f, 1f, 1f));
         }
+    }
+
+    void CloseCurrentActiveActionPanel()
+    {
+        if (GlobalSettings.currentActiveMetadataHandler != null)
+        {
+            GlobalSettings.currentActiveMetadataHandler.SendMessage("Close");
+        }
+        GlobalSettings.currentActiveMetadataHandler = null;
     }
 }

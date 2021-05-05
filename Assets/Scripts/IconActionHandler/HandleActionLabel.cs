@@ -210,5 +210,21 @@ public class HandleActionLabel : MonoBehaviour
     public void TeleportIconAction()
     {
         Debug.Log("Teleport Action");
+
+        CloseCurrentActiveActionPanel();
+
+        WarningManager.singleton.SetUpWarning(gameObject.transform.position,"Stai per teletrasportarti", "se primi si andrai nella scena "+ avaibleActions["teletrasporto"].paths[0].path,
+            () => { SceneManagerScript.singleton.LoadScene(avaibleActions["teletrasporto"].paths[0].path); },
+            () => { }
+            );
+    }
+
+    void CloseCurrentActiveActionPanel()
+    {
+        if (GlobalSettings.currentActiveMetadataHandler != null)
+        {
+            GlobalSettings.currentActiveMetadataHandler.SendMessage("Close");
+        }
+        GlobalSettings.currentActiveMetadataHandler =null;
     }
 }
