@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Mirror;
 using RootMotion.FinalIK;
+using CrazyMinnow.SALSA.DissonanceLink;
 
 public class Syncer : NetworkBehaviour
 {
@@ -79,7 +78,7 @@ public class Syncer : NetworkBehaviour
     {
         base.OnStartClient();
         Debug.Log("Syncer OnStartClient");
-        if (!GlobalSettings.IsHost)
+        if (!GlobalSettings.IsHost) 
             SetCloneAnchors();
     }
 
@@ -93,21 +92,9 @@ public class Syncer : NetworkBehaviour
 
     public void SetCloneAnchors()
     {
-        AvatarController[] avatars = FindObjectsOfType<AvatarController>();
-        foreach (AvatarController avatar in avatars)
-        {
-            if (avatar.Clone)
-            {
-                VRIK vrik = avatar.GetComponent<VRIK>();
-                if (vrik != null)
-                {
-                    vrik.solver.spine.headTarget = headAnchor;
-                    vrik.solver.leftArm.target = lHandAnchor;
-                    vrik.solver.rightArm.target = rHandAnchor;
-                }
-                else Debug.LogError($"Vrik is null on object called {transform.name}");
-            }
-        }
+        GameObject avatarHost = GameObject.FindObjectOfType<SalsaDissonanceLink>().gameObject;
+        VRIK vrik = avatarHost.GetComponent<VRIK>();
+        vrik.enabled = false;
     }
 
     private void Update()
@@ -120,10 +107,6 @@ public class Syncer : NetworkBehaviour
             lHandRot = originLeft.rotation;
             rHandPos = originRight.position;
             rHandRot = originRight.rotation;
-        }
-        else
-        { 
-            //Debug.Log("It's a client"); 
         }
     }
 

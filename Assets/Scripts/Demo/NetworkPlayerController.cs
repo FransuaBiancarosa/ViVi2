@@ -1,27 +1,37 @@
 ﻿using UnityEngine;
 using Mirror;
-
+using RootMotion.FinalIK;
+using UnityEngine.EventSystems;
 
 public class NetworkPlayerController : NetworkBehaviour
 {
-    [SyncVar]
-    public int prova = 0;
     [SerializeField] private Mode host;
+    [SerializeField] private Transform OculusQuestController;
     public Mode Host { get => host; }
 
     public override void OnStartLocalPlayer()
     {
-        //FindObjectOfType<LocalPlayerController>().OnRemotePlayerActivated();
         Debug.Log("Local Player Started");
-        
-    }
+        //Set the VRIK anchors for the avatar of the host
+        VRIK ik = GetComponent<VRIK>();
+        VRIKAnchor[] anchors = FindObjectsOfType<VRIKAnchor>();
+        foreach(VRIKAnchor anchor in anchors) {
+            switch (anchor.Type)
+            {
+                case AnchorType.Head:
+                    ik.solver.spine.headTarget = anchor.transform;
+                    break;
+                case AnchorType.Left:
+                    ik.solver.leftArm.target = anchor.transform;
+                    break;
+                case AnchorType.Right:
+                    ik.solver.rightArm.target = anchor.transform;
+                    break;
+                default: return;
+            }
+        }
 
-    void Update()
-    {
-        //regular clients cannot do anything related to the network behaviour
-        if(!GlobalSettings.IsHost)
-            return;
-        if (OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.LTouch) || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch))
-            prova++;
+        //Set the anchor for the OVR Input module
+        GameObject.FindObjectOfType<OVRInputModule>().rayTransform = OculusQuestController;
     }
 }
