@@ -11,7 +11,8 @@ public class ImageHandler : MonoBehaviour
     public GameObject imageCanvas;
 
     public RawImage imagePlayer;
-    public TextMeshProUGUI audioTitle;
+    public Text audioTitle;
+    //public TextMeshProUGUI audioTitle;
     public GameObject nextButton;
     public GameObject prevButton;
 
@@ -33,9 +34,22 @@ public class ImageHandler : MonoBehaviour
         }
         GlobalSettings.currentActiveMetadataHandler = this.gameObject;
 
+        GameObject tempPlayer = new GameObject();
+        tempPlayer.transform.position = Camera.main.transform.position;
+        Vector3 tempRotation = Camera.main.transform.rotation.eulerAngles;
+        tempRotation.x = 0;
+        tempRotation.z = 0;
+        tempPlayer.transform.rotation = Quaternion.Euler(tempRotation);
+
+
+        Vector3 spawnPos2 = Camera.main.transform.position + (tempPlayer.transform.forward * 1.5f);
+        spawnPos2.y = 1.7f;
+        spawnPos2.z = 4.5f;
+        imageCanvas.transform.position = spawnPos2;
+        Destroy(tempPlayer);
 
         imageCanvas.SetActive(true);
-        imageCanvas.transform.position = spawnPosition;
+        
 
         this.imagePaths = imagePaths;
         if (imagePaths.Count <= 1)
