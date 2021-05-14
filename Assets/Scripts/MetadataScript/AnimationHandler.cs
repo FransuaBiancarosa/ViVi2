@@ -76,19 +76,7 @@ public class AnimationHandler : MonoBehaviour
             animationSyncer.stop = false;
         }
 
-        GameObject tempPlayer = new GameObject();
-        tempPlayer.transform.position = Camera.main.transform.position;
-        Vector3 tempRotation = Camera.main.transform.rotation.eulerAngles;
-        tempRotation.x = 0;
-        tempRotation.z = 0;
-        tempPlayer.transform.rotation = Quaternion.Euler(tempRotation);
-
-
-        Vector3 spawnPos2 = Camera.main.transform.position + (tempPlayer.transform.forward * 1.5f);
-        spawnPos2.y = 0f;
-        spawnPos2.z = 4.5f;
-        animationPlayerCanvas.transform.position = spawnPos2;
-        Destroy(tempPlayer);
+        SpawnInFrontOfPlayer(animationPlayerCanvas, 0f, 4.5f);
 
         animationPlayerCanvas.SetActive(true);
         
@@ -290,5 +278,29 @@ public class AnimationHandler : MonoBehaviour
     {
         StopAnimation();
         animationPlayerCanvas.SetActive(false);
+    }
+
+    void SpawnInFrontOfPlayer(GameObject go, float height, float distance)
+    {
+        GameObject tempPlayer = new GameObject();
+        tempPlayer.transform.position = Camera.main.transform.position;
+        Vector3 tempRotation = Camera.main.transform.rotation.eulerAngles;
+        tempRotation.x = 0;
+        tempRotation.z = 0;
+        tempPlayer.transform.position = new Vector3(tempPlayer.transform.position.x, height, tempPlayer.transform.position.z);
+        tempPlayer.transform.rotation = Quaternion.Euler(tempRotation);
+
+        Vector3 spawnPos2 = tempPlayer.transform.position + (tempPlayer.transform.forward * distance);
+     
+        spawnPos2.y = 1f * gameObject.transform.localScale.y;
+
+        go.transform.position = spawnPos2;
+
+        go.transform.LookAt(tempPlayer.transform);
+        go.transform.Rotate(new Vector3(0, 180, 0));
+        go.transform.rotation = Quaternion.Euler(0, go.transform.rotation.eulerAngles.y, go.transform.rotation.eulerAngles.z);
+
+        Destroy(tempPlayer);
+
     }
 }

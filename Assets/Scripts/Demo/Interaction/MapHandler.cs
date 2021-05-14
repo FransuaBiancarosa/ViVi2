@@ -32,7 +32,7 @@ public class MapHandler : MonoBehaviour
         map.transform.Rotate(new Vector3(0, 180,0));
         map.transform.rotation = Quaternion.Euler(0, map.transform.rotation.eulerAngles.y, map.transform.rotation.eulerAngles.z);
         map.transform.Translate(new Vector3(0f, heightOffset, 0f));
-        //Destroy(tempPlayer);
+        Destroy(tempPlayer);
 
         map.SetActive(true);
         IsActive = true;
